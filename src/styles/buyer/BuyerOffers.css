@@ -1,0 +1,1819 @@
+/* =========================================
+   BUYER OFFERS PAGE
+========================================= */
+
+.buyer-offers-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    background: #eeece7;
+
+    color: #172235;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.buyer-offers-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px 18px;
+
+    background: #172235;
+
+    z-index: 100;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.buyer-offers-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 10px;
+
+    color: white;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.buyer-offers-logo > span > span {
+    color: #d6a85f;
+}
+
+.buyer-offers-logo-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #d6a85f;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.buyer-offers-nav {
+    margin-top: 55px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.buyer-offers-nav-title {
+    margin: 0 10px 12px;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.buyer-offers-account-title {
+    margin-top: 30px;
+}
+
+.buyer-offers-nav-item {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.buyer-offers-nav-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+
+    color: white;
+}
+
+.buyer-offers-nav-item.active {
+    background: rgba(214, 168, 95, 0.14);
+
+    color: #d6a85f;
+}
+
+.buyer-offers-nav-icon {
+    width: 22px;
+
+    display: flex;
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+.buyer-offers-disabled {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+
+/* =========================================
+   SIDEBAR BOTTOM
+========================================= */
+
+.buyer-offers-sidebar-bottom {
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.buyer-offers-user {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 10px;
+}
+
+.buyer-offers-avatar {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #d6a85f;
+
+    color: #172235;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.buyer-offers-user-info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.buyer-offers-user-info strong {
+    overflow: hidden;
+
+    color: white;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.buyer-offers-user-info span {
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 10px;
+}
+
+.buyer-offers-logout {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 12px;
+
+    padding: 10px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.buyer-offers-logout:hover {
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #d6a85f;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.buyer-offers-main {
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    margin-left: 250px;
+
+    padding: 0 45px 40px;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.buyer-offers-topbar {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e6e8eb;
+}
+
+.buyer-offers-top-label {
+    margin: 0 0 3px;
+
+    color: #b48643;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+}
+
+.buyer-offers-topbar h2 {
+    margin: 0;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.buyer-offers-top-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.buyer-offers-top-avatar {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eadcc5;
+
+    color: #8f692f;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.buyer-offers-top-profile div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.buyer-offers-top-profile strong {
+    font-size: 12px;
+}
+
+.buyer-offers-top-profile span {
+    color: #9299a3;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   INTRO
+========================================= */
+
+.buyer-offers-intro {
+    margin-top: 35px;
+
+    padding: 30px 35px;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #172235,
+            #263850
+        );
+}
+
+.buyer-offers-intro p {
+    margin: 0 0 8px;
+
+    color: #d6a85f;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.8px;
+}
+
+.buyer-offers-intro h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 30px;
+
+    line-height: 1.2;
+}
+
+.buyer-offers-intro h1 span {
+    color: #d6a85f;
+}
+
+.buyer-offers-intro > div > span {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.buyer-offers-stats {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-top: 22px;
+}
+
+.buyer-offers-stat-card {
+    min-height: 90px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 16px;
+
+    border: 1px solid #e5e8ec;
+
+    border-radius: 10px;
+
+    background: white;
+}
+
+.buyer-offers-stat-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    font-size: 16px;
+}
+
+.buyer-offers-stat-icon.total {
+    background: #edf3f8;
+}
+
+.buyer-offers-stat-icon.pending {
+    background: #f4f1e9;
+}
+
+.buyer-offers-stat-icon.counter {
+    background: #f2eef7;
+}
+
+.buyer-offers-stat-icon.accepted {
+    background: #edf5ef;
+}
+
+.buyer-offers-stat-card > div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.buyer-offers-stat-card span {
+    color: #8b929d;
+
+    font-size: 9px;
+}
+
+.buyer-offers-stat-card strong {
+    color: #172235;
+
+    font-size: 22px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.buyer-offers-content {
+    margin-top: 38px;
+}
+
+.buyer-offers-section-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.buyer-offers-section-header p {
+    margin: 0 0 5px;
+
+    color: #b48643;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.buyer-offers-section-header h3 {
+    margin: 0;
+
+    color: #172235;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+.buyer-offers-filter {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+}
+
+.buyer-offers-filter label {
+    color: #8d949d;
+
+    font-size: 9px;
+}
+
+.buyer-offers-filter select {
+    height: 36px;
+
+    padding: 0 11px;
+
+    border: 1px solid #e1e4e8;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: white;
+
+    color: #172235;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+.buyer-offers-filter select:focus {
+    border-color: #d6a85f;
+}
+
+
+/* =========================================
+   OFFERS LIST
+========================================= */
+
+.buyer-offers-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   OFFER CARD
+========================================= */
+
+.buyer-offers-card {
+    padding: 20px;
+
+    border: 1px solid #e4e7eb;
+
+    border-radius: 11px;
+
+    background: white;
+
+    transition: all 0.2s ease;
+}
+
+.buyer-offers-card:hover {
+    border-color: #d6c09c;
+
+    box-shadow:
+        0 8px 22px rgba(23, 34, 53, 0.05);
+}
+
+
+/* =========================================
+   PROPERTY
+========================================= */
+
+.buyer-offers-property {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+}
+
+.buyer-offers-property-image {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e9eef2,
+            #dfe5e9
+        );
+
+    font-size: 25px;
+}
+
+.buyer-offers-property-info {
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.buyer-offers-property-info > span {
+    color: #b48643;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.buyer-offers-property-info h4 {
+    overflow: hidden;
+
+    margin: 0;
+
+    color: #172235;
+
+    font-size: 14px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.buyer-offers-property-info p {
+    margin: 0;
+
+    overflow: hidden;
+
+    color: #8d949d;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   OFFER DETAILS
+========================================= */
+
+.buyer-offers-details {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-top: 18px;
+
+    padding: 15px 0;
+
+    border-top: 1px solid #edf0f2;
+    border-bottom: 1px solid #edf0f2;
+}
+
+.buyer-offers-detail {
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.buyer-offers-detail small {
+    color: #a0a6ae;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.buyer-offers-detail strong {
+    color: #172235;
+
+    font-size: 14px;
+}
+
+.buyer-offers-date {
+    font-size: 11px !important;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.buyer-offers-status-area {
+    margin-top: 14px;
+}
+
+.buyer-offers-status {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 10px;
+
+    border-radius: 5px;
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.buyer-offers-status.pending {
+    background: #f6f0e5;
+
+    color: #9b7137;
+}
+
+.buyer-offers-status.accepted {
+    background: #eaf4ed;
+
+    color: #4f765d;
+}
+
+.buyer-offers-status.rejected {
+    background: #f8eded;
+
+    color: #a45b5b;
+}
+
+.buyer-offers-status.countered {
+    background: #f1ebf7;
+
+    color: #77548e;
+}
+
+.buyer-offers-status.unknown {
+    background: #f1f2f4;
+
+    color: #747b84;
+}
+
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.buyer-offers-message {
+    margin-top: 15px;
+
+    padding: 12px;
+
+    border-radius: 7px;
+
+    background: #f7f8f9;
+}
+
+.buyer-offers-message small {
+    color: #a0a6ae;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.buyer-offers-message p {
+    margin: 6px 0 0;
+
+    color: #727b86;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   COUNTER OFFER
+========================================= */
+
+.buyer-offers-counter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-top: 15px;
+
+    padding: 14px;
+
+    border: 1px solid #eadfcf;
+
+    border-radius: 8px;
+
+    background: #fbf8f2;
+}
+
+.buyer-offers-counter strong {
+    color: #765b32;
+
+    font-size: 10px;
+}
+
+.buyer-offers-counter p {
+    max-width: 600px;
+
+    margin: 4px 0 0;
+
+    color: #9a886e;
+
+    font-size: 9px;
+
+    line-height: 1.5;
+}
+
+.buyer-offers-counter button {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    flex-shrink: 0;
+
+    padding: 9px 13px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #d6a85f;
+
+    color: #172235;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.buyer-offers-counter button:hover {
+    background: #e2ba79;
+
+    transform: translateY(-1px);
+}
+
+.buyer-offers-counter button span {
+    font-size: 13px;
+}
+
+
+/* =========================================
+   LOADING
+========================================= */
+
+.buyer-offers-loading {
+    min-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid #e5e8ec;
+
+    border-radius: 11px;
+
+    background: white;
+}
+
+.buyer-offers-spinner {
+    width: 32px;
+    height: 32px;
+
+    margin-bottom: 12px;
+
+    border: 3px solid #e5e8ec;
+
+    border-top-color: #d6a85f;
+
+    border-radius: 50%;
+
+    animation: buyer-offers-spin 0.8s linear infinite;
+}
+
+.buyer-offers-loading p {
+    margin: 0;
+
+    color: #8d949d;
+
+    font-size: 11px;
+}
+
+@keyframes buyer-offers-spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.buyer-offers-empty {
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    border: 1px dashed #dfe3e8;
+
+    border-radius: 11px;
+
+    background: white;
+
+    text-align: center;
+}
+
+.buyer-offers-empty-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+
+    background: #f2f3f5;
+
+    font-size: 21px;
+}
+
+.buyer-offers-empty h4 {
+    margin: 0 0 6px;
+
+    font-size: 14px;
+}
+
+.buyer-offers-empty p {
+    margin: 0;
+
+    color: #9299a3;
+
+    font-size: 10px;
+}
+
+.buyer-offers-empty button {
+    margin-top: 15px;
+
+    padding: 9px 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #172235;
+
+    color: white;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.buyer-offers-empty button:hover {
+    background: #263850;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.buyer-offers-footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 50px;
+    padding-top: 20px;
+
+    border-top: 1px solid #e6e8eb;
+
+    color: #a5abb3;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   COUNTER MODAL
+========================================= */
+
+.buyer-counter-modal-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 25px;
+
+    background: rgba(12, 20, 32, 0.78);
+
+    backdrop-filter: blur(5px);
+
+    animation: buyer-counter-overlay-in 0.2s ease;
+}
+
+.buyer-counter-modal {
+    width: 100%;
+    max-width: 570px;
+
+    overflow: hidden;
+
+    border-radius: 15px;
+
+    background: white;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.28);
+
+    animation: buyer-counter-modal-in 0.25s ease;
+}
+
+
+/* =========================================
+   COUNTER HEADER
+========================================= */
+
+.buyer-counter-modal-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 23px 25px;
+
+    border-bottom: 1px solid #edf0f2;
+}
+
+.buyer-counter-modal-header span {
+    color: #b48643;
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 1.4px;
+}
+
+.buyer-counter-modal-header h2 {
+    margin: 6px 0 0;
+
+    color: #172235;
+
+    font-size: 20px;
+}
+
+.buyer-counter-modal-close {
+    width: 32px;
+    height: 32px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f2f4;
+
+    color: #68717c;
+
+    font-size: 22px;
+
+    cursor: pointer;
+}
+
+.buyer-counter-modal-close:hover {
+    background: #172235;
+
+    color: white;
+}
+
+
+/* =========================================
+   COUNTER PROPERTY
+========================================= */
+
+.buyer-counter-property {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 20px 25px;
+
+    padding: 13px;
+
+    border-radius: 9px;
+
+    background: #f7f8f9;
+}
+
+.buyer-counter-property-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #e9eef2;
+
+    font-size: 20px;
+}
+
+.buyer-counter-property > div:last-child {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.buyer-counter-property strong {
+    overflow: hidden;
+
+    color: #172235;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.buyer-counter-property span {
+    overflow: hidden;
+
+    color: #8d949d;
+
+    font-size: 9px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   COMPARISON
+========================================= */
+
+.buyer-counter-comparison {
+    display: grid;
+
+    grid-template-columns: 1fr 35px 1fr;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin: 0 25px;
+
+    padding: 18px;
+
+    border: 1px solid #e7eaed;
+
+    border-radius: 9px;
+
+    background: white;
+}
+
+.buyer-counter-comparison > div:not(.buyer-counter-arrow) {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.buyer-counter-comparison small {
+    color: #a0a6ae;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 0.8px;
+}
+
+.buyer-counter-comparison strong {
+    color: #172235;
+
+    font-size: 17px;
+}
+
+.buyer-counter-new strong {
+    color: #b48643;
+}
+
+.buyer-counter-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #a0a6ae;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   COUNTER MESSAGE
+========================================= */
+
+.buyer-counter-message {
+    margin: 20px 25px 0;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #edf0f2;
+}
+
+.buyer-counter-message small {
+    color: #a0a6ae;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.buyer-counter-message p {
+    margin: 8px 0 0;
+
+    color: #727b86;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   COUNTER NOTE
+========================================= */
+
+.buyer-counter-note {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 9px;
+
+    margin: 18px 25px 0;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: #fbf8f2;
+}
+
+.buyer-counter-note > span {
+    width: 20px;
+    height: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #eadcc5;
+
+    color: #8f692f;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.buyer-counter-note p {
+    margin: 0;
+
+    color: #8a7658;
+
+    font-size: 9px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   COUNTER ACTIONS
+========================================= */
+
+.buyer-counter-actions {
+    display: flex;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-top: 20px;
+
+    padding: 17px 25px;
+
+    border-top: 1px solid #edf0f2;
+
+    background: #fafbfc;
+}
+
+.buyer-counter-reject {
+    padding: 10px 16px;
+
+    border: 1px solid #dfcaca;
+
+    border-radius: 7px;
+
+    background: white;
+
+    color: #a45b5b;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.buyer-counter-reject:hover {
+    background: #f9eeee;
+}
+
+.buyer-counter-accept {
+    min-width: 130px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 10px 16px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #d6a85f;
+
+    color: #172235;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.buyer-counter-accept:hover {
+    background: #e2ba79;
+}
+
+.buyer-counter-reject:disabled,
+.buyer-counter-accept:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================
+   COUNTER SPINNER
+========================================= */
+
+.buyer-counter-spinner {
+    width: 13px;
+    height: 13px;
+
+    border: 2px solid rgba(23, 34, 53, 0.25);
+
+    border-top-color: #172235;
+
+    border-radius: 50%;
+
+    animation: buyer-counter-spin 0.7s linear infinite;
+}
+
+@keyframes buyer-counter-spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================
+   MODAL ANIMATIONS
+========================================= */
+
+@keyframes buyer-counter-overlay-in {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes buyer-counter-modal-in {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .buyer-offers-main {
+        padding: 0 25px 35px;
+    }
+
+    .buyer-offers-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .buyer-offers-sidebar {
+        width: 210px;
+    }
+
+    .buyer-offers-main {
+        width: calc(100% - 210px);
+
+        margin-left: 210px;
+    }
+
+    .buyer-offers-logo {
+        font-size: 18px;
+    }
+
+    .buyer-offers-nav-item {
+        font-size: 11px;
+    }
+
+    .buyer-offers-details {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .buyer-offers-page {
+        display: block;
+    }
+
+    .buyer-offers-sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        padding: 17px 18px;
+    }
+
+    .buyer-offers-logo {
+        padding: 0;
+    }
+
+    .buyer-offers-nav {
+        margin-top: 20px;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 5px;
+    }
+
+    .buyer-offers-nav-title,
+    .buyer-offers-account-title {
+        display: none;
+    }
+
+    .buyer-offers-nav-item {
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 5px;
+
+        padding: 10px 5px;
+
+        text-align: center;
+
+        font-size: 9px;
+    }
+
+    .buyer-offers-nav-icon {
+        font-size: 15px;
+    }
+
+    .buyer-offers-sidebar-bottom {
+        display: none;
+    }
+
+    .buyer-offers-main {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 0 17px 30px;
+    }
+
+    .buyer-offers-topbar {
+        height: 75px;
+    }
+
+    .buyer-offers-top-profile > div:last-child {
+        display: none;
+    }
+
+    .buyer-offers-intro {
+        margin-top: 20px;
+
+        padding: 25px;
+    }
+
+    .buyer-offers-intro h1 {
+        font-size: 25px;
+    }
+
+    .buyer-offers-stats {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+    }
+
+    .buyer-offers-stat-card {
+        min-height: 80px;
+
+        padding: 12px;
+    }
+
+    .buyer-offers-content {
+        margin-top: 30px;
+    }
+
+    .buyer-offers-section-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 12px;
+    }
+
+    .buyer-offers-section-header h3 {
+        font-size: 17px;
+    }
+
+    .buyer-offers-filter {
+        width: 100%;
+    }
+
+    .buyer-offers-filter select {
+        flex: 1;
+    }
+
+    .buyer-offers-details {
+        grid-template-columns: 1fr 1fr;
+
+        gap: 14px;
+    }
+
+    .buyer-offers-counter {
+        align-items: stretch;
+
+        flex-direction: column;
+    }
+
+    .buyer-offers-counter button {
+        justify-content: center;
+    }
+
+    .buyer-offers-footer {
+        flex-direction: column;
+
+        gap: 6px;
+
+        margin-top: 35px;
+    }
+
+    .buyer-counter-modal-overlay {
+        align-items: flex-end;
+
+        padding: 0;
+    }
+
+    .buyer-counter-modal {
+        max-height: 94vh;
+
+        overflow-y: auto;
+
+        border-radius: 15px 15px 0 0;
+    }
+
+    .buyer-counter-modal-header {
+        padding: 20px;
+    }
+
+    .buyer-counter-property {
+        margin: 17px 20px;
+    }
+
+    .buyer-counter-comparison {
+        margin: 0 20px;
+
+        padding: 14px;
+    }
+
+    .buyer-counter-message {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .buyer-counter-note {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .buyer-counter-actions {
+        flex-direction: column-reverse;
+
+        padding: 15px 20px;
+    }
+
+    .buyer-counter-reject,
+    .buyer-counter-accept {
+        width: 100%;
+
+        min-height: 42px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+.buyer-offers-property-image {
+  width: 72px;
+  height: 72px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 9px;
+
+  background: #e9eef2;
+}
+
+.buyer-offers-property-image > img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.buyer-offers-property-image-fallback {
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+
+  opacity: 0.7;
+}
+
+
+/* Counter offer property image */
+
+.buyer-counter-property-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: #e9eef2;
+
+  font-size: 21px;
+}
+
+.buyer-counter-property-icon > img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.buyer-counter-property-icon-fallback {
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+}
