@@ -1,0 +1,116 @@
+/* =========================================
+   PROPERTYHUB - BUYER TOPBAR
+========================================= */
+
+.propertyhub-buyer-topbar {
+  height: 88px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e6e8eb;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.propertyhub-buyer-topbar-heading {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.propertyhub-buyer-topbar-heading p {
+  margin: 0;
+
+  color: #b48643;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+.propertyhub-buyer-topbar-heading h2 {
+  margin: 0;
+
+  color: #172235;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+
+/* =========================================
+   PROFILE
+========================================= */
+
+.propertyhub-buyer-topbar-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.propertyhub-buyer-topbar-avatar {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #eadcc5;
+
+  color: #8f692f;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.propertyhub-buyer-topbar-user {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.propertyhub-buyer-topbar-user strong {
+  color: #172235;
+
+  font-size: 12px;
+}
+
+.propertyhub-buyer-topbar-user span {
+  color: #9299a3;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .propertyhub-buyer-topbar {
+    height: 75px;
+  }
+
+  .propertyhub-buyer-topbar-user {
+    display: none;
+  }
+
+  .propertyhub-buyer-topbar-heading h2 {
+    font-size: 19px;
+  }
+}
