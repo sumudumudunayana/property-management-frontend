@@ -1,0 +1,1306 @@
+/* =========================================
+   BUYER DASHBOARD
+========================================= */
+
+.buyer-dashboard {
+    min-height: 100vh;
+
+    display: flex;
+
+    background: #eeece7;
+
+    color: #172235;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.buyer-sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 250px;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 28px 18px;
+
+    background: #172235;
+
+    z-index: 100;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.dashboard-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 0 10px;
+
+    color: white;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.dashboard-logo > span > span {
+    color: #d6a85f;
+}
+
+.dashboard-logo-icon {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #d6a85f;
+
+    font-size: 18px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.dashboard-nav {
+    margin-top: 55px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.nav-section-title {
+    margin: 0 10px 12px;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.nav-section-spaced {
+    margin-top: 30px;
+}
+
+.dashboard-nav-item {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 12px 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.58);
+
+    font-size: 13px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.dashboard-nav-item:hover {
+    background: rgba(255, 255, 255, 0.06);
+
+    color: white;
+}
+
+.dashboard-nav-item.active {
+    background: rgba(214, 168, 95, 0.14);
+
+    color: #d6a85f;
+}
+
+.nav-icon {
+    width: 22px;
+
+    display: flex;
+    justify-content: center;
+
+    font-size: 15px;
+}
+
+
+/* =========================================
+   SIDEBAR BOTTOM
+========================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-user {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 10px;
+}
+
+.sidebar-avatar {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #d6a85f;
+
+    color: #172235;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.sidebar-user-info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.sidebar-user-info strong {
+    overflow: hidden;
+
+    color: white;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.sidebar-user-info span {
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 10px;
+}
+
+.sidebar-logout {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 12px;
+
+    padding: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: rgba(255, 255, 255, 0.45);
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    border-radius: 7px;
+
+    transition: all 0.2s ease;
+}
+
+.sidebar-logout:hover {
+    background: rgba(255, 255, 255, 0.05);
+
+    color: #d6a85f;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.buyer-main {
+    width: calc(100% - 250px);
+
+    min-height: 100vh;
+
+    margin-left: 250px;
+
+    padding: 0 45px 40px;
+}
+
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.buyer-topbar {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #e6e8eb;
+}
+
+.topbar-label {
+    margin: 0 0 3px;
+
+    color: #b48643;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.7px;
+}
+
+.buyer-topbar h2 {
+    margin: 0;
+
+    font-size: 21px;
+    font-weight: 700;
+}
+
+.topbar-profile {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.topbar-avatar {
+    width: 37px;
+    height: 37px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eadcc5;
+
+    color: #8f692f;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.topbar-profile div:last-child {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.topbar-profile strong {
+    font-size: 12px;
+}
+
+.topbar-profile span {
+    color: #9299a3;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   WELCOME BANNER
+========================================= */
+
+.welcome-banner {
+    position: relative;
+
+    min-height: 270px;
+
+    display: flex;
+
+    margin-top: 35px;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #172235,
+            #263850
+        );
+}
+
+.welcome-content {
+    position: relative;
+
+    z-index: 2;
+
+    padding: 38px 42px;
+}
+
+.welcome-content > p:first-child {
+    margin: 0 0 12px;
+
+    color: #d6a85f;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.welcome-content h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 35px;
+
+    line-height: 1.15;
+
+    letter-spacing: -1px;
+}
+
+.welcome-content h1 span {
+    color: #d6a85f;
+}
+
+.welcome-description {
+    max-width: 440px;
+
+    margin: 17px 0 24px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.primary-dashboard-btn {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 11px 17px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #d6a85f;
+
+    color: #172235;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.primary-dashboard-btn:hover {
+    background: #e2ba79;
+
+    transform: translateY(-1px);
+}
+
+.primary-dashboard-btn span {
+    font-size: 16px;
+}
+
+
+/* =========================================
+   BANNER DECORATION
+========================================= */
+
+.welcome-decoration {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 42%;
+    height: 100%;
+}
+
+.decoration-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.circle-one {
+    width: 340px;
+    height: 340px;
+
+    top: -100px;
+    right: -60px;
+}
+
+.circle-two {
+    width: 230px;
+    height: 230px;
+
+    bottom: -110px;
+    right: 100px;
+}
+
+.house-decoration {
+    position: absolute;
+
+    top: 50%;
+    right: 25%;
+
+    transform: translateY(-50%);
+
+    font-size: 105px;
+
+    opacity: 0.85;
+
+    filter: grayscale(0.15);
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.dashboard-stats {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+
+    margin-top: 22px;
+}
+
+.stat-card {
+    min-height: 105px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 18px;
+
+    border: 1px solid #e5e8ec;
+
+    border-radius: 11px;
+
+    background: white;
+}
+
+.stat-icon {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    font-size: 18px;
+}
+
+.property-stat {
+    background: #edf3f8;
+}
+
+.offer-stat {
+    background: #f6f0e7;
+}
+
+.pending-stat {
+    background: #f2f1f5;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+.stat-info span {
+    color: #8b929d;
+
+    font-size: 10px;
+}
+
+.stat-info strong {
+    color: #172235;
+
+    font-size: 24px;
+
+    line-height: 1.2;
+}
+
+.stat-info small {
+    color: #b0b5bc;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   SECTIONS
+========================================= */
+
+.dashboard-section {
+    margin-top: 38px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.section-heading p {
+    margin: 0 0 5px;
+
+    color: #b48643;
+
+    font-size: 9px;
+    font-weight: 700;
+
+    letter-spacing: 1.5px;
+}
+
+.section-heading h3 {
+    margin: 0;
+
+    color: #172235;
+
+    font-size: 20px;
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.action-card {
+    display: flex;
+
+    gap: 18px;
+
+    padding: 23px;
+
+    border: 1px solid #e5e8ec;
+
+    border-radius: 11px;
+
+    background: white;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.action-card:hover {
+    border-color: #d6c09c;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(23, 34, 53, 0.06);
+}
+
+.action-icon {
+    width: 47px;
+    height: 47px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 10px;
+
+    font-size: 20px;
+}
+
+.browse-icon {
+    background: #edf3f8;
+}
+
+.offers-icon {
+    background: #f6f0e7;
+}
+
+.action-content h4 {
+    margin: 1px 0 7px;
+
+    font-size: 14px;
+}
+
+.action-content p {
+    margin: 0;
+
+    color: #8b929d;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+.action-content span {
+    display: inline-block;
+
+    margin-top: 13px;
+
+    color: #b48643;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   SECTION LINK
+========================================= */
+
+.section-link {
+    border: none;
+
+    background: transparent;
+
+    color: #b48643;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.section-link:hover {
+    text-decoration: underline;
+}
+
+
+/* =========================================
+   EMPTY ACTIVITY
+========================================= */
+
+.empty-activity {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    border: 1px dashed #dfe3e8;
+
+    border-radius: 11px;
+
+    background: white;
+
+    text-align: center;
+}
+
+.empty-activity-icon {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+
+    border-radius: 50%;
+
+    background: #f2f3f5;
+
+    font-size: 18px;
+}
+
+.empty-activity h4 {
+    margin: 0 0 5px;
+
+    font-size: 13px;
+}
+
+.empty-activity p {
+    margin: 0;
+
+    color: #969da7;
+
+    font-size: 11px;
+}
+
+.empty-activity button {
+    margin-top: 14px;
+
+    padding: 8px 13px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #172235;
+
+    color: white;
+
+    font-size: 10px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.empty-activity button:hover {
+    background: #263850;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.dashboard-footer {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 50px;
+    padding-top: 20px;
+
+    border-top: 1px solid #e6e8eb;
+
+    color: #a5abb3;
+
+    font-size: 9px;
+}
+
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .buyer-main {
+        padding: 0 25px 35px;
+    }
+
+    .welcome-content {
+        padding: 32px;
+    }
+
+    .welcome-content h1 {
+        font-size: 30px;
+    }
+
+    .welcome-decoration {
+        width: 35%;
+    }
+
+    .house-decoration {
+        font-size: 80px;
+
+        right: 20%;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - SMALL TABLET
+========================================= */
+
+@media (max-width: 850px) {
+
+    .buyer-sidebar {
+        width: 210px;
+    }
+
+    .buyer-main {
+        width: calc(100% - 210px);
+
+        margin-left: 210px;
+    }
+
+    .dashboard-logo {
+        font-size: 18px;
+    }
+
+    .dashboard-nav-item {
+        font-size: 11px;
+    }
+
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .buyer-dashboard {
+        display: block;
+    }
+
+    .buyer-sidebar {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+        min-height: auto;
+
+        padding: 17px 18px;
+    }
+
+    .dashboard-logo {
+        padding: 0;
+    }
+
+    .dashboard-nav {
+        margin-top: 20px;
+
+        display: grid;
+
+        grid-template-columns: repeat(3, 1fr);
+
+        gap: 5px;
+    }
+
+    .nav-section-title,
+    .nav-section-spaced {
+        display: none;
+    }
+
+    .dashboard-nav-item {
+        flex-direction: column;
+
+        justify-content: center;
+
+        gap: 5px;
+
+        padding: 10px 5px;
+
+        text-align: center;
+
+        font-size: 9px;
+    }
+
+    .nav-icon {
+        font-size: 15px;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
+
+    .buyer-main {
+        width: 100%;
+
+        margin-left: 0;
+
+        padding: 0 17px 30px;
+    }
+
+    .buyer-topbar {
+        height: 75px;
+    }
+
+    .topbar-profile > div:last-child {
+        display: none;
+    }
+
+    .welcome-banner {
+        min-height: auto;
+
+        margin-top: 20px;
+    }
+
+    .welcome-content {
+        padding: 28px 25px;
+    }
+
+    .welcome-content h1 {
+        font-size: 28px;
+    }
+
+    .welcome-description {
+        max-width: 100%;
+    }
+
+    .welcome-decoration {
+        display: none;
+    }
+
+    .dashboard-stats {
+        gap: 10px;
+    }
+
+    .stat-card {
+        min-height: 90px;
+    }
+
+    .dashboard-section {
+        margin-top: 30px;
+    }
+
+    .section-heading h3 {
+        font-size: 17px;
+    }
+
+    .action-card {
+        padding: 18px;
+    }
+
+    .dashboard-footer {
+        flex-direction: column;
+
+        gap: 6px;
+
+        margin-top: 35px;
+    }
+
+}
+
+
+
+/* =========================================
+   REAL RECENT ACTIVITY
+========================================= */
+
+.buyer-dashboard-activity-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.buyer-dashboard-activity-card {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 15px 17px;
+
+    border: 1px solid #e5e8ec;
+
+    border-radius: 10px;
+
+    background: white;
+
+    transition: all 0.2s ease;
+}
+
+
+.buyer-dashboard-activity-card:hover {
+    border-color: #d6c09c;
+
+    box-shadow:
+        0 7px 20px rgba(23, 34, 53, 0.05);
+}
+
+
+.buyer-dashboard-activity-icon {
+    width: 39px;
+    height: 39px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    background: #f6f0e7;
+
+    font-size: 16px;
+}
+
+
+.buyer-dashboard-activity-info {
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+
+.buyer-dashboard-activity-info strong {
+    overflow: hidden;
+
+    color: #172235;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+
+.buyer-dashboard-activity-info span {
+    color: #9299a3;
+
+    font-size: 9px;
+}
+
+
+.buyer-dashboard-activity-status {
+    flex-shrink: 0;
+}
+
+
+.buyer-dashboard-activity-status > span {
+    display: inline-flex;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+
+/* =========================================
+   ACTIVITY STATUS COLORS
+========================================= */
+
+.activity-status-pending {
+    background: #f6f0e5;
+
+    color: #9b7137;
+}
+
+
+.activity-status-accepted {
+    background: #eaf4ed;
+
+    color: #4f765d;
+}
+
+
+.activity-status-rejected {
+    background: #f8eded;
+
+    color: #a45b5b;
+}
+
+
+.activity-status-countered {
+    background: #f1ebf7;
+
+    color: #77548e;
+}
+
+
+.activity-status-default {
+    background: #f1f2f4;
+
+    color: #747b84;
+}
+
+
+/* =========================================
+   ACTIVITY VIEW BUTTON
+========================================= */
+
+.buyer-dashboard-activity-view {
+    flex-shrink: 0;
+
+    padding: 7px 11px;
+
+    border: 1px solid #dfe3e7;
+
+    border-radius: 6px;
+
+    background: white;
+
+    color: #68717c;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+
+.buyer-dashboard-activity-view:hover {
+    border-color: #d6a85f;
+
+    color: #8f692f;
+
+    background: #fbf8f2;
+}
+
+
+/* =========================================
+   LOADING SPINNER
+========================================= */
+
+.buyer-dashboard-loading-spinner {
+    width: 30px;
+    height: 30px;
+
+    margin-bottom: 10px;
+
+    border: 3px solid #e5e8ec;
+
+    border-top-color: #d6a85f;
+
+    border-radius: 50%;
+
+    animation: buyer-dashboard-spin 0.8s linear infinite;
+}
+
+
+@keyframes buyer-dashboard-spin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================
+   ACTIVITY RESPONSIVE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .buyer-dashboard-activity-card {
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .buyer-dashboard-activity-info {
+        max-width: calc(100% - 55px);
+    }
+
+    .buyer-dashboard-activity-status {
+        margin-left: 53px;
+    }
+
+    .buyer-dashboard-activity-view {
+        margin-left: auto;
+    }
+
+}
+
+
+
+.buyer-dashboard-activity-icon {
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: #e9eef2;
+}
+
+.buyer-dashboard-activity-icon > img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.buyer-dashboard-activity-image-fallback {
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+}
