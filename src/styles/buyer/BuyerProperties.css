@@ -1,0 +1,2475 @@
+/* =========================================
+   BUYER PROPERTIES PAGE
+========================================= */
+
+.buyer-properties-page {
+  min-height: 100vh;
+
+  display: flex;
+
+  background: #eeece7;
+
+  color: #172235;
+
+  font-family: inherit;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.buyer-properties-sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 250px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px 18px;
+
+  background: #172235;
+
+  z-index: 100;
+}
+
+/* =========================================
+   LOGO
+========================================= */
+
+.buyer-properties-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 0 10px;
+
+  color: white;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.buyer-properties-logo > span > span {
+  color: #d6a85f;
+}
+
+.buyer-properties-logo-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #d6a85f;
+
+  font-size: 18px;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.buyer-properties-nav {
+  margin-top: 55px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.buyer-properties-nav-title {
+  margin: 0 10px 12px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.buyer-properties-account-title {
+  margin-top: 30px;
+}
+
+.buyer-properties-nav-item {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 13px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.buyer-properties-nav-item:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  color: white;
+}
+
+.buyer-properties-nav-item.active {
+  background: rgba(214, 168, 95, 0.14);
+
+  color: #d6a85f;
+}
+
+.buyer-properties-nav-icon {
+  width: 22px;
+
+  display: flex;
+  justify-content: center;
+
+  font-size: 15px;
+}
+
+.buyer-properties-disabled {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+/* =========================================
+   SIDEBAR BOTTOM
+========================================= */
+
+.buyer-properties-sidebar-bottom {
+  margin-top: auto;
+
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.buyer-properties-user {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 10px;
+}
+
+.buyer-properties-avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #eadcc5;
+
+  color: #8f692f;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.buyer-properties-user-info {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.buyer-properties-user-info strong {
+  overflow: hidden;
+
+  color: white;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.buyer-properties-user-info span {
+  color: rgba(255, 255, 255, 0.38);
+
+  font-size: 9px;
+}
+
+.buyer-properties-logout {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: 10px;
+
+  padding: 10px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.buyer-properties-logout:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  color: white;
+}
+
+.buyer-properties-logout span {
+  font-size: 14px;
+}
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.buyer-properties-main {
+  width: calc(100% - 250px);
+
+  min-height: 100vh;
+
+  margin-left: 250px;
+
+  padding: 0 35px 40px;
+}
+
+/* =========================================
+   TOP BAR
+========================================= */
+
+.buyer-properties-topbar {
+  height: 88px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e6e8eb;
+}
+
+.buyer-properties-top-label {
+  margin: 0 0 3px;
+
+  color: #b48643;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+.buyer-properties-topbar h2 {
+  margin: 0;
+
+  color: #172235;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.buyer-properties-top-profile {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+}
+
+.buyer-properties-top-avatar {
+  width: 37px;
+  height: 37px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #eadcc5;
+
+  color: #8f692f;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.buyer-properties-top-profile div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.buyer-properties-top-profile strong {
+  color: #172235;
+
+  font-size: 12px;
+}
+
+.buyer-properties-top-profile span {
+  color: #9299a3;
+
+  font-size: 10px;
+}
+
+/* =========================================
+   PAGE INTRO
+========================================= */
+
+.buyer-properties-intro {
+  margin-top: 35px;
+
+  padding: 30px 35px;
+
+  border-radius: 13px;
+
+  background: linear-gradient(120deg, #172235, #263850);
+
+  box-shadow: 0 10px 30px rgba(23, 34, 53, 0.08);
+}
+
+.buyer-properties-intro p {
+  margin: 0 0 8px;
+
+  color: #d6a85f;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.buyer-properties-intro h1 {
+  margin: 0;
+
+  color: white;
+
+  font-size: 30px;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.7px;
+}
+
+.buyer-properties-intro h1 span {
+  color: #d6a85f;
+}
+
+.buyer-properties-count {
+  display: inline-block;
+
+  margin-top: 12px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 11px;
+}
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.buyer-properties-filters {
+  display: flex;
+  align-items: flex-end;
+
+  gap: 15px;
+
+  margin-top: 25px;
+}
+
+.buyer-properties-search {
+  flex: 1;
+
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 15px;
+
+  border: 1px solid #e2e5e9;
+
+  border-radius: 9px;
+
+  background: white;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.buyer-properties-search:focus-within {
+  border-color: #d6a85f;
+
+  box-shadow: 0 0 0 3px rgba(214, 168, 95, 0.08);
+}
+
+.buyer-properties-search > span {
+  color: #9ba2aa;
+
+  font-size: 15px;
+}
+
+.buyer-properties-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  color: #172235;
+
+  font-size: 11px;
+}
+
+.buyer-properties-search input::placeholder {
+  color: #aeb3b9;
+}
+
+/* =========================================
+   TYPE FILTER
+========================================= */
+
+.buyer-properties-type-filter {
+  height: 48px;
+
+  min-width: 180px;
+
+  padding: 0 35px 0 13px;
+
+  border: 1px solid #e2e5e9;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: white;
+
+  color: #172235;
+
+  font-size: 10px;
+
+  cursor: pointer;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.buyer-properties-type-filter:focus {
+  border-color: #d6a85f;
+
+  box-shadow: 0 0 0 3px rgba(214, 168, 95, 0.08);
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.buyer-properties-content {
+  margin-top: 40px;
+}
+
+.buyer-properties-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 18px;
+}
+
+.buyer-properties-section-header h3 {
+  margin: 0;
+
+  color: #172235;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.buyer-properties-section-header span {
+  color: #9299a3;
+
+  font-size: 9px;
+}
+
+/* =========================================
+   PROPERTY GRID
+========================================= */
+
+.buyer-properties-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+/* =========================================
+   PROPERTY CARD
+========================================= */
+
+.buyer-properties-card {
+  overflow: hidden;
+
+  border: 1px solid #e4e7eb;
+
+  border-radius: 12px;
+
+  background: white;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.buyer-properties-card:hover {
+  border-color: #d6c09c;
+
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 28px rgba(23, 34, 53, 0.07);
+}
+
+/* =========================================
+   CARD IMAGE
+========================================= */
+
+.buyer-properties-card-image {
+  position: relative;
+
+  height: 155px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #e9eef2, #dfe5e9);
+}
+
+/*
+   Real property image
+   Added for imageUrl support
+*/
+
+.buyer-properties-card-image > img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+.buyer-properties-card:hover .buyer-properties-card-image > img {
+  transform: scale(1.03);
+}
+
+/* =========================================
+   CARD IMAGE FALLBACK
+========================================= */
+
+.buyer-properties-card-house {
+  font-size: 65px;
+
+  opacity: 0.75;
+}
+
+/* =========================================
+   CARD TYPE
+========================================= */
+
+.buyer-properties-card-type {
+  position: absolute;
+
+  top: 12px;
+  left: 12px;
+
+  padding: 5px 9px;
+
+  border-radius: 5px;
+
+  background: rgba(23, 34, 53, 0.88);
+
+  color: white;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+/* =========================================
+   CARD STATUS
+========================================= */
+
+.buyer-properties-card-status {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  padding: 5px 9px;
+
+  border-radius: 5px;
+
+  background: rgba(255, 255, 255, 0.92);
+
+  color: #4f765d;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+/* =========================================
+   CARD BODY
+========================================= */
+
+.buyer-properties-card-body {
+  padding: 18px;
+}
+
+.buyer-properties-card-body h4 {
+  margin: 0 0 8px;
+
+  color: #172235;
+
+  font-size: 15px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.buyer-properties-location {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  margin-bottom: 15px;
+
+  color: #858d97;
+
+  font-size: 10px;
+}
+
+.buyer-properties-location span:first-child {
+  font-size: 11px;
+}
+
+/* =========================================
+   PROPERTY DETAILS
+========================================= */
+
+.buyer-properties-details {
+  display: flex;
+
+  gap: 20px;
+
+  padding: 12px 0;
+
+  border-top: 1px solid #edf0f2;
+  border-bottom: 1px solid #edf0f2;
+}
+
+.buyer-properties-details div {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.buyer-properties-details span {
+  font-size: 12px;
+}
+
+.buyer-properties-details strong {
+  color: #172235;
+
+  font-size: 11px;
+}
+
+.buyer-properties-details small {
+  color: #9ca2aa;
+
+  font-size: 9px;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.buyer-properties-description {
+  height: 36px;
+
+  overflow: hidden;
+
+  margin: 13px 0 16px;
+
+  color: #8c939c;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+
+  display: -webkit-box;
+
+  -webkit-line-clamp: 2;
+
+  -webkit-box-orient: vertical;
+}
+
+/* =========================================
+   CARD FOOTER
+========================================= */
+
+.buyer-properties-card-footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  gap: 10px;
+}
+
+.buyer-properties-price {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+}
+
+.buyer-properties-price small {
+  color: #a0a6ae;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.buyer-properties-price strong {
+  color: #172235;
+
+  font-size: 17px;
+}
+
+/* =========================================
+   VIEW BUTTON
+========================================= */
+
+.buyer-properties-view-btn {
+  display: flex;
+  align-items: center;
+
+  gap: 7px;
+
+  padding: 9px 12px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #172235;
+
+  color: white;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.buyer-properties-view-btn:hover {
+  background: #263850;
+
+  transform: translateY(-1px);
+}
+
+.buyer-properties-view-btn span {
+  color: #d6a85f;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.buyer-properties-loading {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e5e8ec;
+
+  border-radius: 11px;
+
+  background: white;
+}
+
+.buyer-properties-spinner {
+  width: 32px;
+  height: 32px;
+
+  margin-bottom: 12px;
+
+  border: 3px solid #e5e8ec;
+
+  border-top-color: #d6a85f;
+
+  border-radius: 50%;
+
+  animation: buyer-properties-spin 0.8s linear infinite;
+}
+
+.buyer-properties-loading p {
+  margin: 0;
+
+  color: #8d949d;
+
+  font-size: 11px;
+}
+
+@keyframes buyer-properties-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.buyer-properties-empty {
+  min-height: 280px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+
+  border: 1px dashed #dfe3e8;
+
+  border-radius: 11px;
+
+  background: white;
+
+  text-align: center;
+}
+
+.buyer-properties-empty-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 50%;
+
+  background: #f2f3f5;
+
+  font-size: 21px;
+}
+
+.buyer-properties-empty h4 {
+  margin: 0 0 6px;
+
+  color: #172235;
+
+  font-size: 14px;
+}
+
+.buyer-properties-empty p {
+  margin: 0;
+
+  color: #9299a3;
+
+  font-size: 10px;
+}
+
+.buyer-properties-empty button {
+  margin-top: 15px;
+
+  padding: 8px 14px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #172235;
+
+  color: white;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.buyer-properties-empty button:hover {
+  background: #263850;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.buyer-properties-footer {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 50px;
+  padding-top: 20px;
+
+  border-top: 1px solid #e6e8eb;
+
+  color: #a5abb3;
+
+  font-size: 9px;
+}
+
+/* =========================================
+   PROPERTY DETAILS MODAL
+========================================= */
+
+.buyer-property-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(12, 20, 32, 0.72);
+
+  backdrop-filter: blur(4px);
+
+  animation: buyer-property-overlay-in 0.2s ease;
+}
+
+/* =========================================
+   PROPERTY MODAL
+========================================= */
+
+.buyer-property-modal {
+  width: 100%;
+  max-width: 650px;
+
+  max-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: white;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
+
+  animation: buyer-property-modal-in 0.25s ease;
+}
+
+/* =========================================
+   MODAL HEADER
+========================================= */
+
+.buyer-property-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 23px 25px 18px;
+
+  border-bottom: 1px solid #edf0f2;
+}
+
+.buyer-property-modal-type {
+  display: inline-block;
+
+  margin-bottom: 7px;
+
+  color: #b48643;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+
+  text-transform: uppercase;
+}
+
+.buyer-property-modal-header h2 {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #172235;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+.buyer-property-modal-close {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f1f2f4;
+
+  color: #68717c;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.buyer-property-modal-close:hover {
+  background: #172235;
+
+  color: white;
+}
+
+/* =========================================
+   MODAL IMAGE
+========================================= */
+
+.buyer-property-modal-image {
+  position: relative;
+
+  height: 175px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: linear-gradient(135deg, #e9eef2, #dfe5e9);
+}
+
+/*
+   Real property image
+*/
+
+.buyer-property-modal-image > img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.buyer-property-modal-image > div {
+  font-size: 75px;
+
+  opacity: 0.75;
+}
+
+.buyer-property-modal-image > span {
+  position: absolute;
+
+  top: 15px;
+  right: 15px;
+
+  padding: 6px 10px;
+
+  border-radius: 6px;
+
+  background: white;
+
+  color: #4f765d;
+
+  font-size: 8px;
+  font-weight: 700;
+}
+
+/* =========================================
+   MODAL BODY
+========================================= */
+
+.buyer-property-modal-body {
+  padding: 23px 25px;
+
+  overflow-y: auto;
+}
+
+/* =========================================
+   PRICE
+========================================= */
+
+.buyer-property-modal-price {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  margin-bottom: 20px;
+}
+
+.buyer-property-modal-price small {
+  color: #a0a6ae;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+.buyer-property-modal-price strong {
+  color: #172235;
+
+  font-size: 25px;
+}
+
+/* =========================================
+   LOCATION
+========================================= */
+
+.buyer-property-modal-location {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px;
+
+  border-radius: 9px;
+
+  background: #f7f8f9;
+}
+
+.buyer-property-modal-location > span {
+  font-size: 17px;
+}
+
+.buyer-property-modal-location > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.buyer-property-modal-location small {
+  color: #a0a6ae;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.buyer-property-modal-location strong {
+  color: #172235;
+
+  font-size: 11px;
+}
+
+/* =========================================
+   MODAL DETAILS
+========================================= */
+
+.buyer-property-modal-details {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 10px;
+
+  margin-top: 15px;
+}
+
+.buyer-property-modal-details > div {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 13px;
+
+  border: 1px solid #edf0f2;
+
+  border-radius: 8px;
+
+  background: white;
+}
+
+.buyer-property-modal-details > div > span {
+  font-size: 17px;
+}
+
+.buyer-property-modal-details > div > div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.buyer-property-modal-details small {
+  color: #a0a6ae;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.buyer-property-modal-details strong {
+  color: #172235;
+
+  font-size: 10px;
+}
+
+/* =========================================
+   MODAL DESCRIPTION
+========================================= */
+
+.buyer-property-modal-description {
+  margin-top: 20px;
+}
+
+.buyer-property-modal-description > small {
+  color: #a0a6ae;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1.1px;
+}
+
+.buyer-property-modal-description p {
+  margin: 7px 0 0;
+
+  color: #6f7781;
+
+  font-size: 10px;
+
+  line-height: 1.7;
+}
+
+/* =========================================
+   MODAL SELLER
+========================================= */
+
+.buyer-property-modal-seller {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  margin-top: 20px;
+
+  padding: 13px;
+
+  border-radius: 9px;
+
+  background: #f7f8f9;
+}
+
+.buyer-property-modal-seller-avatar {
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #eadcc5;
+
+  color: #8f692f;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.buyer-property-modal-seller > div:last-child {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.buyer-property-modal-seller small {
+  color: #a0a6ae;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.9px;
+}
+
+.buyer-property-modal-seller strong {
+  color: #172235;
+
+  font-size: 10px;
+}
+
+/* =========================================
+   MODAL FOOTER
+========================================= */
+
+.buyer-property-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding: 15px 25px;
+
+  border-top: 1px solid #edf0f2;
+
+  background: white;
+}
+
+.buyer-property-modal-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 17px;
+
+  border: 1px solid #dfe3e7;
+
+  border-radius: 7px;
+
+  background: white;
+
+  color: #6f7781;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.buyer-property-modal-secondary:hover {
+  border-color: #c9ced4;
+
+  background: #f5f6f7;
+}
+
+.buyer-property-modal-offer {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 10px 17px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #d6a85f;
+
+  color: #172235;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.buyer-property-modal-offer:hover {
+  background: #e2ba79;
+
+  transform: translateY(-1px);
+}
+
+.buyer-property-modal-offer span {
+  font-size: 14px;
+}
+
+/* =========================================
+   MODAL LOADING
+========================================= */
+
+.buyer-property-modal-loading {
+  min-height: 300px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+}
+
+.buyer-property-modal-loading p {
+  margin: 0;
+
+  color: #8d949d;
+
+  font-size: 11px;
+}
+
+.buyer-property-modal-spinner {
+  width: 32px;
+  height: 32px;
+
+  border: 3px solid #e5e8ec;
+
+  border-top-color: #d6a85f;
+
+  border-radius: 50%;
+
+  animation: buyer-property-modal-spin 0.8s linear infinite;
+}
+
+@keyframes buyer-property-modal-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   MODAL ANIMATIONS
+========================================= */
+
+@keyframes buyer-property-overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes buyer-property-modal-in {
+  from {
+    opacity: 0;
+
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================
+   MAKE OFFER MODAL
+========================================= */
+
+.buyer-offer-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1100;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 25px;
+
+  background: rgba(12, 20, 32, 0.78);
+
+  backdrop-filter: blur(5px);
+
+  animation: buyer-offer-overlay-in 0.2s ease;
+}
+
+/* =========================================
+   OFFER MODAL
+========================================= */
+
+.buyer-offer-modal {
+  width: 100%;
+
+  max-width: 570px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  border-radius: 15px;
+
+  background: white;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.28);
+
+  animation: buyer-offer-modal-in 0.25s ease;
+}
+
+/* =========================================
+   OFFER HEADER
+========================================= */
+
+.buyer-offer-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 25px;
+
+  border-bottom: 1px solid #edf0f2;
+}
+
+.buyer-offer-modal-header > div {
+  min-width: 0;
+}
+
+.buyer-offer-modal-header span {
+  color: #b48643;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.buyer-offer-modal-header h2 {
+  margin: 6px 0 5px;
+
+  color: #172235;
+
+  font-size: 22px;
+
+  line-height: 1.3;
+}
+
+.buyer-offer-modal-header p {
+  margin: 0;
+
+  color: #8d949d;
+
+  font-size: 10px;
+}
+
+.buyer-offer-modal-close {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: #f1f2f4;
+
+  color: #68717c;
+
+  font-size: 22px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.buyer-offer-modal-close:hover {
+  background: #172235;
+
+  color: white;
+}
+
+.buyer-offer-modal-close:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* =========================================
+   OFFER PROPERTY SUMMARY
+========================================= */
+
+.buyer-offer-property-summary {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin: 20px 25px;
+
+  padding: 14px;
+
+  border: 1px solid #e7eaed;
+
+  border-radius: 10px;
+
+  background: #f8f9fa;
+}
+
+.buyer-offer-property-icon {
+  width: 44px;
+  height: 44px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+
+  background: #e9eef2;
+
+  font-size: 20px;
+}
+
+/*
+   Real property image
+*/
+
+.buyer-offer-property-icon > img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  border-radius: 8px;
+}
+
+.buyer-offer-property-info {
+  min-width: 0;
+
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.buyer-offer-property-info strong {
+  overflow: hidden;
+
+  color: #172235;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.buyer-offer-property-info span {
+  overflow: hidden;
+
+  color: #8d949d;
+
+  font-size: 9px;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.buyer-offer-property-price {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 3px;
+
+  flex-shrink: 0;
+}
+
+.buyer-offer-property-price small {
+  color: #a0a6ae;
+
+  font-size: 7px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+}
+
+.buyer-offer-property-price strong {
+  color: #172235;
+
+  font-size: 13px;
+}
+
+/* =========================================
+   OFFER FORM
+========================================= */
+
+.buyer-offer-form {
+  padding: 0 25px 25px;
+}
+
+.buyer-offer-form-group {
+  margin-bottom: 20px;
+}
+
+.buyer-offer-form-group label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+
+  color: #172235;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.buyer-offer-form-group label > span {
+  color: #a0a6ae;
+
+  font-size: 8px;
+  font-weight: 500;
+}
+
+/* =========================================
+   AMOUNT INPUT
+========================================= */
+
+.buyer-offer-amount-input {
+  height: 47px;
+
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #dfe3e7;
+
+  border-radius: 8px;
+
+  background: white;
+
+  overflow: hidden;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.buyer-offer-amount-input:focus-within {
+  border-color: #d6a85f;
+
+  box-shadow: 0 0 0 3px rgba(214, 168, 95, 0.08);
+}
+
+.buyer-offer-amount-input > span {
+  width: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  align-self: stretch;
+
+  border-right: 1px solid #e8eaed;
+
+  background: #f7f8f9;
+
+  color: #8f692f;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.buyer-offer-amount-input input {
+  width: 100%;
+  height: 100%;
+
+  padding: 0 13px;
+
+  border: none;
+  outline: none;
+
+  color: #172235;
+
+  background: transparent;
+
+  font-size: 12px;
+}
+
+.buyer-offer-amount-input input::placeholder {
+  color: #aeb3b9;
+}
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.buyer-offer-form-group textarea {
+  width: 100%;
+
+  padding: 12px;
+
+  resize: vertical;
+
+  border: 1px solid #dfe3e7;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  color: #172235;
+
+  background: white;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+
+  box-sizing: border-box;
+}
+
+.buyer-offer-form-group textarea:focus {
+  border-color: #d6a85f;
+
+  box-shadow: 0 0 0 3px rgba(214, 168, 95, 0.08);
+}
+
+.buyer-offer-form-group textarea::placeholder {
+  color: #aeb3b9;
+}
+
+.buyer-offer-form-group textarea:disabled,
+.buyer-offer-amount-input input:disabled {
+  background: #f7f8f9;
+
+  cursor: not-allowed;
+}
+
+.buyer-offer-form-group small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #a0a6ae;
+
+  font-size: 8px;
+
+  line-height: 1.5;
+}
+
+/* =========================================
+   INFORMATION BOX
+========================================= */
+
+.buyer-offer-information {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-bottom: 22px;
+
+  padding: 13px;
+
+  border: 1px solid #eadfcf;
+
+  border-radius: 8px;
+
+  background: #fbf8f2;
+}
+
+.buyer-offer-information > span {
+  width: 20px;
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #eadcc5;
+
+  color: #8f692f;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.buyer-offer-information p {
+  margin: 0;
+
+  color: #8a7658;
+
+  font-size: 9px;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   OFFER MODAL FOOTER
+========================================= */
+
+.buyer-offer-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  padding-top: 17px;
+
+  border-top: 1px solid #edf0f2;
+}
+
+.buyer-offer-cancel-btn {
+  padding: 10px 18px;
+
+  border: 1px solid #dfe3e7;
+
+  border-radius: 7px;
+
+  background: white;
+
+  color: #6f7781;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.buyer-offer-cancel-btn:hover {
+  background: #f5f6f7;
+
+  border-color: #c9ced4;
+}
+
+.buyer-offer-cancel-btn:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+/* =========================================
+   SUBMIT OFFER BUTTON
+========================================= */
+
+.buyer-offer-submit-btn {
+  min-width: 125px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  padding: 10px 17px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #d6a85f;
+
+  color: #172235;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.buyer-offer-submit-btn:hover {
+  background: #e2ba79;
+
+  transform: translateY(-1px);
+}
+
+.buyer-offer-submit-btn:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+.buyer-offer-submit-btn > span:last-child {
+  font-size: 13px;
+}
+
+/* =========================================
+   SUBMIT BUTTON SPINNER
+========================================= */
+
+.buyer-offer-button-spinner {
+  width: 12px;
+  height: 12px;
+
+  border: 2px solid rgba(23, 34, 53, 0.25);
+
+  border-top-color: #172235;
+
+  border-radius: 50%;
+
+  animation: buyer-offer-button-spin 0.7s linear infinite;
+}
+
+@keyframes buyer-offer-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   OFFER ANIMATIONS
+========================================= */
+
+@keyframes buyer-offer-overlay-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes buyer-offer-modal-in {
+  from {
+    opacity: 0;
+
+    transform: translateY(15px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .buyer-properties-main {
+    padding: 0 25px 35px;
+  }
+
+  .buyer-properties-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 850px) {
+  .buyer-properties-sidebar {
+    width: 210px;
+  }
+
+  .buyer-properties-main {
+    width: calc(100% - 210px);
+
+    margin-left: 210px;
+  }
+
+  .buyer-properties-logo {
+    font-size: 18px;
+  }
+
+  .buyer-properties-nav-item {
+    font-size: 11px;
+  }
+
+  .buyer-properties-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .buyer-properties-page {
+    display: block;
+  }
+
+  .buyer-properties-sidebar {
+    position: relative;
+
+    width: 100%;
+    height: auto;
+    min-height: auto;
+
+    padding: 17px 18px;
+  }
+
+  .buyer-properties-logo {
+    padding: 0;
+  }
+
+  .buyer-properties-nav {
+    margin-top: 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 5px;
+  }
+
+  .buyer-properties-nav-title,
+  .buyer-properties-account-title {
+    display: none;
+  }
+
+  .buyer-properties-nav-item {
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 10px 5px;
+
+    text-align: center;
+
+    font-size: 9px;
+  }
+
+  .buyer-properties-nav-icon {
+    font-size: 15px;
+  }
+
+  .buyer-properties-sidebar-bottom {
+    display: none;
+  }
+
+  .buyer-properties-main {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 0 17px 30px;
+  }
+
+  .buyer-properties-topbar {
+    height: 75px;
+  }
+
+  .buyer-properties-top-profile > div:last-child {
+    display: none;
+  }
+
+  .buyer-properties-intro {
+    margin-top: 20px;
+
+    padding: 25px;
+  }
+
+  .buyer-properties-intro h1 {
+    font-size: 25px;
+  }
+
+  .buyer-properties-filters {
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 12px;
+
+    margin-top: 18px;
+  }
+
+  .buyer-properties-type-filter {
+    width: 100%;
+  }
+
+  .buyer-properties-content {
+    margin-top: 30px;
+  }
+
+  .buyer-properties-section-header h3 {
+    font-size: 17px;
+  }
+
+  .buyer-properties-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .buyer-properties-card-image {
+    height: 170px;
+  }
+
+  .buyer-properties-footer {
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-top: 35px;
+  }
+
+  /* =====================================
+     PROPERTY MODAL MOBILE
+  ===================================== */
+
+  .buyer-property-modal-overlay {
+    align-items: flex-end;
+
+    padding: 0;
+  }
+
+  .buyer-property-modal {
+    max-height: 94vh;
+
+    border-radius: 15px 15px 0 0;
+  }
+
+  .buyer-property-modal-header {
+    padding: 20px;
+  }
+
+  .buyer-property-modal-header h2 {
+    font-size: 18px;
+  }
+
+  .buyer-property-modal-body {
+    padding: 20px;
+  }
+
+  .buyer-property-modal-image {
+    height: 145px;
+  }
+
+  .buyer-property-modal-details {
+    grid-template-columns: 1fr;
+  }
+
+  .buyer-property-modal-footer {
+    padding: 15px 20px;
+  }
+
+  .buyer-property-modal-secondary,
+  .buyer-property-modal-offer {
+    flex: 1;
+
+    justify-content: center;
+  }
+
+  /* =====================================
+     OFFER MODAL MOBILE
+  ===================================== */
+
+  .buyer-offer-modal-overlay {
+    align-items: flex-end;
+
+    padding: 0;
+  }
+
+  .buyer-offer-modal {
+    max-height: 94vh;
+
+    border-radius: 15px 15px 0 0;
+  }
+
+  .buyer-offer-modal-header {
+    padding: 20px;
+  }
+
+  .buyer-offer-modal-header h2 {
+    font-size: 19px;
+  }
+
+  .buyer-offer-property-summary {
+    margin: 15px 20px;
+
+    padding: 12px;
+  }
+
+  .buyer-offer-form {
+    padding: 0 20px 20px;
+  }
+
+  .buyer-offer-modal-footer {
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  .buyer-offer-cancel-btn,
+  .buyer-offer-submit-btn {
+    width: 100%;
+
+    justify-content: center;
+  }
+}
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 420px) {
+  .buyer-properties-main {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .buyer-properties-intro {
+    padding: 21px;
+  }
+
+  .buyer-properties-intro h1 {
+    font-size: 22px;
+  }
+
+  .buyer-properties-card-body {
+    padding: 15px;
+  }
+
+  .buyer-properties-card-footer {
+    align-items: stretch;
+
+    flex-direction: column;
+  }
+
+  .buyer-properties-view-btn {
+    justify-content: center;
+
+    width: 100%;
+  }
+
+  .buyer-properties-price strong {
+    font-size: 16px;
+  }
+
+  .buyer-property-modal-price strong {
+    font-size: 22px;
+  }
+
+  .buyer-offer-property-summary {
+    align-items: flex-start;
+
+    flex-wrap: wrap;
+  }
+
+  .buyer-offer-property-price {
+    width: 100%;
+
+    align-items: flex-start;
+
+    padding-left: 56px;
+  }
+}
+
+
