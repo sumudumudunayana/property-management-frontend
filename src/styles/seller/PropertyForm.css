@@ -1,0 +1,563 @@
+/* =========================================================
+   PROPERTY FORM PAGE
+========================================================= */
+
+.property-form-page {
+  min-height: 100vh;
+
+  display: flex;
+
+  background: #eeece7;
+
+  color: #172235;
+}
+
+
+/* =========================================================
+   MAIN CONTENT AREA
+   Matches SellerSidebar width: 250px
+========================================================= */
+
+.property-form-main {
+  min-width: 0;
+
+  width: calc(100% - 290px);
+
+  min-height: 100vh;
+
+  margin-left: 290px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.property-form-content {
+  width: 100%;
+
+  max-width: 900px;
+
+  box-sizing: border-box;
+
+  margin: 0 auto;
+
+  padding: 40px 25px 50px;
+}
+
+
+/* =========================================================
+   FORM CARD
+========================================================= */
+
+.property-form-card {
+  width: 100%;
+
+  overflow: hidden;
+
+  border: 1px solid #e3e6ea;
+
+  border-radius: 13px;
+
+  background: white;
+
+  box-shadow:
+    0 5px 20px rgba(23, 34, 53, 0.03);
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.property-form-card-header {
+  padding: 27px 30px;
+
+  border-bottom: 1px solid #edf0f2;
+
+  background: white;
+}
+
+.property-form-card-header h2 {
+  margin: 0 0 6px;
+
+  color: #172235;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.property-form-card-header p {
+  margin: 0;
+
+  color: #9299a3;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FORM
+========================================================= */
+
+.property-form-form {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+
+  padding: 30px;
+}
+
+
+/* =========================================================
+   FORM FIELD
+========================================================= */
+
+.property-form-field {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+.property-form-field-full {
+  grid-column: span 2;
+}
+
+.property-form-field label {
+  color: #3b4450;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+.property-form-field label span {
+  margin-left: 3px;
+
+  color: #b48643;
+}
+
+
+/* =========================================================
+   INPUTS
+========================================================= */
+
+.property-form-field input,
+.property-form-field select,
+.property-form-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dfe3e8;
+
+  border-radius: 8px;
+
+  outline: none;
+
+  background: white;
+
+  color: #172235;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.property-form-field input,
+.property-form-field select {
+  height: 48px;
+
+  padding: 0 13px;
+}
+
+.property-form-field textarea {
+  min-height: 130px;
+
+  padding: 13px;
+
+  resize: vertical;
+}
+
+.property-form-field input::placeholder,
+.property-form-field textarea::placeholder {
+  color: #adb3bb;
+}
+
+.property-form-field input:focus,
+.property-form-field select:focus,
+.property-form-field textarea:focus {
+  border-color: #b48643;
+
+  box-shadow:
+    0 0 0 3px rgba(180, 134, 67, 0.08);
+}
+
+
+/* =========================================================
+   PRICE INPUT
+========================================================= */
+
+.property-form-price-wrapper {
+  position: relative;
+}
+
+.property-form-price-wrapper > span {
+  position: absolute;
+
+  left: 13px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #8d959e;
+
+  font-size: 11px;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+.property-form-price-wrapper input {
+  padding-left: 35px;
+}
+
+
+/* =========================================================
+   HELP TEXT
+========================================================= */
+
+.property-form-help-text {
+  margin-top: -2px;
+
+  color: #9299a3;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   IMAGE PREVIEW
+========================================================= */
+
+.property-form-image-preview {
+  width: 100%;
+
+  height: 220px;
+
+  overflow: hidden;
+
+  margin-top: 6px;
+
+  border: 1px solid #e3e6ea;
+
+  border-radius: 9px;
+
+  background: #f6f7f9;
+}
+
+.property-form-image-preview img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================================================
+   FORM ACTIONS
+========================================================= */
+
+.property-form-actions {
+  grid-column: span 2;
+
+  display: flex;
+
+  justify-content: flex-end;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 8px;
+
+  padding-top: 25px;
+
+  border-top: 1px solid #edf0f2;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.property-form-cancel-button,
+.property-form-submit-button {
+  min-height: 43px;
+
+  padding: 0 17px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease,
+    opacity 0.2s ease;
+}
+
+
+/* =========================================================
+   CANCEL BUTTON
+========================================================= */
+
+.property-form-cancel-button {
+  border: 1px solid #dfe3e8;
+
+  background: white;
+
+  color: #69727d;
+}
+
+.property-form-cancel-button:hover {
+  background: #f8f9fa;
+
+  border-color: #cfd4da;
+}
+
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+.property-form-submit-button {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  border: none;
+
+  background: #172235;
+
+  color: white;
+}
+
+.property-form-submit-button:hover:not(:disabled) {
+  background: #263850;
+}
+
+.property-form-submit-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+}
+
+.property-form-submit-button > span:last-child {
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   SUBMIT SPINNER
+========================================================= */
+
+.property-form-submit-spinner {
+  width: 14px;
+  height: 14px;
+
+  border: 2px solid rgba(255, 255, 255, 0.3);
+
+  border-top-color: white;
+
+  border-radius: 50%;
+
+  animation: propertyFormSubmitSpin 0.7s linear infinite;
+}
+
+@keyframes propertyFormSubmitSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.property-form-loading {
+  flex: 1;
+
+  min-height: calc(100vh - 88px);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #9299a3;
+
+  font-size: 12px;
+}
+
+.property-form-loading p {
+  margin: 0;
+}
+
+.property-form-loading-spinner {
+  width: 30px;
+  height: 30px;
+
+  margin-bottom: 12px;
+
+  border: 3px solid #e1e4e8;
+
+  border-top-color: #b48643;
+
+  border-radius: 50%;
+
+  animation: propertyFormLoadingSpin 0.8s linear infinite;
+}
+
+@keyframes propertyFormLoadingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .property-form-content {
+    max-width: 100%;
+
+    padding-left: 20px;
+
+    padding-right: 20px;
+  }
+
+  .property-form-form {
+    padding: 25px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .property-form-page {
+    flex-direction: column;
+  }
+
+  .property-form-main {
+    width: 100%;
+
+    min-height: auto;
+
+    margin-left: 0;
+  }
+
+  .property-form-content {
+    margin-top: 20px;
+
+    padding: 0 15px 30px;
+  }
+
+  .property-form-card-header {
+    padding: 22px;
+  }
+
+  .property-form-form {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+
+    padding: 22px;
+  }
+
+  .property-form-field-full {
+    grid-column: span 1;
+  }
+
+  .property-form-actions {
+    grid-column: span 1;
+
+    flex-direction: column-reverse;
+
+    align-items: stretch;
+  }
+
+  .property-form-cancel-button,
+  .property-form-submit-button {
+    width: 100%;
+  }
+
+  .property-form-image-preview {
+    height: 180px;
+  }
+
+  .property-form-loading {
+    min-height: 300px;
+  }
+}
+
+.propertyhub-seller-topbar {
+  width: 100%;
+  height: 88px;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 45px;
+
+  border-bottom: 1px solid #e6e8eb;
+
+  background: #eeece7;
+
+  flex-shrink: 0;
+}
