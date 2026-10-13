@@ -1,0 +1,724 @@
+/* =========================================
+   PROPERTY OFFERS PAGE
+========================================= */
+
+.property-offers-page {
+  min-height: 100vh;
+  background: #eeece7;
+  display: flex;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.property-offers-sidebar {
+  width: 250px;
+  min-height: 100vh;
+  background: #0f172a;
+  color: #ffffff;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+
+.property-offers-logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 0 10px 32px;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.property-offers-logo > span > span {
+  color: #d4a94f;
+}
+
+.property-offers-logo-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #d4a94f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.property-offers-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.property-offers-nav p {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #64748b;
+  margin: 0 10px 10px;
+}
+
+.property-offers-nav button {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #94a3b8;
+  padding: 12px 13px;
+  border-radius: 9px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.property-offers-nav button:hover {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.property-offers-nav button.active {
+  background: #1e293b;
+  color: #ffffff;
+}
+
+.property-offers-nav button.active span {
+  color: #d4a94f;
+}
+
+/* =========================================
+   MAIN
+========================================= */
+
+.property-offers-main {
+  margin-left: 250px;
+  width: calc(100% - 250px);
+  min-height: 100vh;
+  padding: 35px 45px 50px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.property-offers-header {
+  margin-bottom: 28px;
+}
+
+.property-offers-header p {
+  margin: 14px 0 5px;
+  color: #d4a94f;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.property-offers-header h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 32px;
+  font-weight: 750;
+}
+
+.property-offers-back {
+  border: none;
+  background: transparent;
+  color: #64748b;
+  padding: 0;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.property-offers-back:hover {
+  color: #0f172a;
+}
+
+/* =========================================
+   PROPERTY SUMMARY
+========================================= */
+
+.property-offers-property-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.property-offers-property-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  background: #f8f1df;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  flex-shrink: 0;
+}
+
+.property-offers-property-info {
+  flex: 1;
+}
+
+.property-offers-property-info > span {
+  font-size: 11px;
+  color: #d4a94f;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.property-offers-property-info h2 {
+  margin: 4px 0;
+  font-size: 21px;
+  color: #0f172a;
+}
+
+.property-offers-property-info p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.property-offers-property-price {
+  text-align: right;
+}
+
+.property-offers-property-price small {
+  display: block;
+  color: #94a3b8;
+  font-size: 11px;
+  margin-bottom: 4px;
+}
+
+.property-offers-property-price strong {
+  color: #0f172a;
+  font-size: 20px;
+}
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.property-offers-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 32px;
+}
+
+.property-offers-stat {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  padding: 19px;
+}
+
+.property-offers-stat span {
+  display: block;
+  color: #64748b;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.property-offers-stat strong {
+  color: #0f172a;
+  font-size: 25px;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.property-offers-section {
+  margin-top: 10px;
+}
+
+.property-offers-section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 18px;
+}
+
+.property-offers-section-heading p {
+  margin: 0 0 5px;
+  color: #d4a94f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.property-offers-section-heading h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 22px;
+}
+
+.property-offers-section-heading > span {
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================================
+   OFFER LIST
+========================================= */
+
+.property-offers-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.property-offer-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 15px;
+  padding: 22px;
+}
+
+.property-offer-buyer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.property-offer-avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #0f172a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.property-offer-buyer h4 {
+  margin: 0 0 3px;
+  color: #0f172a;
+  font-size: 15px;
+}
+
+.property-offer-buyer span {
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.property-offer-details {
+  display: flex;
+  gap: 60px;
+  padding: 15px 0;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.property-offer-details small,
+.property-offer-message small {
+  display: block;
+  color: #94a3b8;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.property-offer-details strong {
+  display: block;
+  color: #0f172a;
+  font-size: 18px;
+}
+
+.property-offer-details span {
+  color: #475569;
+  font-size: 13px;
+}
+
+.property-offer-status {
+  margin-top: 15px;
+}
+
+.property-offer-status > span {
+  display: inline-flex;
+  padding: 6px 11px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.property-offers-status-pending {
+  background: #fff7ed;
+  color: #c2410c;
+}
+
+.property-offers-status-accepted {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.property-offers-status-rejected {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.property-offers-status-countered {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+/* =========================================
+   MESSAGE
+========================================= */
+
+.property-offer-message {
+  margin-top: 15px;
+  padding: 14px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.property-offer-message p {
+  margin: 0;
+  color: #475569;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.property-offer-actions {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin-top: 18px;
+}
+
+.property-offer-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 9px 17px;
+  font-size: 12px;
+  font-weight: 650;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.property-offer-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.property-offer-accept {
+  background: #0f766e;
+  color: #ffffff;
+}
+
+.property-offer-accept:hover:not(:disabled) {
+  background: #115e59;
+}
+
+.property-offer-counter {
+  background: #d4a94f;
+  color: #ffffff;
+}
+
+.property-offer-counter:hover:not(:disabled) {
+  background: #b88d35;
+}
+
+.property-offer-reject {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.property-offer-reject:hover:not(:disabled) {
+  background: #fecaca;
+}
+
+.property-offer-counter-info {
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.property-offers-empty {
+  background: #ffffff;
+  border: 1px dashed #cbd5e1;
+  border-radius: 15px;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.property-offers-empty > div {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.property-offers-empty h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.property-offers-empty p {
+  margin: 0;
+  color: #64748b;
+  font-size: 13px;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.property-offers-loading {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+}
+
+.property-offers-spinner {
+  width: 38px;
+  height: 38px;
+  border: 3px solid #e2e8f0;
+  border-top-color: #d4a94f;
+  border-radius: 50%;
+  animation: propertyOffersSpin 0.8s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes propertyOffersSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.property-offers-loading p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* =========================================
+   MODAL
+========================================= */
+
+.property-offers-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 20px;
+}
+
+.property-offers-modal {
+  width: 100%;
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 17px;
+  padding: 27px;
+  box-shadow: 0 25px 70px rgba(15, 23, 42, 0.25);
+}
+
+.property-offers-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.property-offers-modal-header p {
+  margin: 0 0 5px;
+  color: #d4a94f;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.property-offers-modal-header h3 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 22px;
+}
+
+.property-offers-modal-header > button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #f1f5f9;
+  color: #475569;
+  border-radius: 8px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.property-offers-modal-original {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.property-offers-modal-original span {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.property-offers-modal-original strong {
+  color: #0f172a;
+  font-size: 17px;
+}
+
+.property-offers-counter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.property-offers-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.property-offers-form-group label {
+  color: #334155;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.property-offers-form-group input,
+.property-offers-form-group textarea {
+  width: 100%;
+  border: 1px solid #cbd5e1;
+  border-radius: 9px;
+  padding: 11px 12px;
+  font-size: 13px;
+  outline: none;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+.property-offers-form-group input:focus,
+.property-offers-form-group textarea:focus {
+  border-color: #d4a94f;
+  box-shadow: 0 0 0 3px rgba(212, 169, 79, 0.12);
+}
+
+.property-offers-modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.property-offers-modal-actions button {
+  flex: 1;
+  min-height: 44px;
+  border: none;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+}
+
+.property-offers-modal-cancel {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.property-offers-modal-submit {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.property-offers-modal-submit:hover {
+  background: #1e293b;
+}
+
+.property-offers-modal-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+  .property-offers-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .property-offers-sidebar {
+    width: 210px;
+  }
+
+  .property-offers-main {
+    margin-left: 210px;
+    width: calc(100% - 210px);
+    padding: 25px;
+  }
+
+  .property-offers-property-card {
+    flex-wrap: wrap;
+  }
+
+  .property-offers-property-price {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .property-offers-sidebar {
+    display: none;
+  }
+
+  .property-offers-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .property-offers-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .property-offer-details {
+    gap: 25px;
+  }
+
+  .property-offer-actions {
+    flex-wrap: wrap;
+  }
+
+  .property-offers-modal {
+    padding: 22px;
+  }
+}
