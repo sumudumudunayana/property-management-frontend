@@ -1,0 +1,1048 @@
+/* =========================================================
+   SELLER OFFERS PAGE
+========================================================= */
+
+.seller-offers-page {
+  min-height: 100vh;
+
+  display: flex;
+
+  background: #eeece7;
+
+  color: #172235;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.seller-offers-main {
+  width: calc(100% - 250px);
+
+  min-height: 100vh;
+
+  margin-left: 250px;
+
+  padding: 0 45px 50px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.seller-offers-content {
+  width: 100%;
+
+  max-width: 1100px;
+
+  margin: 0 auto;
+
+  padding-top: 35px;
+}
+
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.seller-offers-intro {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 25px;
+
+  margin-bottom: 22px;
+}
+
+.seller-offers-intro h2 {
+  margin: 0 0 5px;
+
+  color: #172235;
+
+  font-size: 20px;
+
+  font-weight: 700;
+}
+
+.seller-offers-intro p {
+  margin: 0;
+
+  color: #9299a3;
+
+  font-size: 11px;
+}
+
+
+/* =========================================================
+   INTRO ACTIONS
+========================================================= */
+
+.seller-offers-intro-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   OFFER COUNT
+========================================================= */
+
+.seller-offers-count {
+  min-width: 85px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  padding: 9px 14px;
+
+  border-radius: 20px;
+
+  background: #edeff2;
+}
+
+.seller-offers-count span {
+  color: #172235;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.seller-offers-count small {
+  color: #777f8a;
+
+  font-size: 8px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   REFRESH BUTTON
+========================================================= */
+
+.seller-offers-refresh-button {
+  height: 37px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 0 14px;
+
+  border: 1px solid #dfe3e8;
+
+  border-radius: 7px;
+
+  background: white;
+
+  color: #68717c;
+
+  font-family: inherit;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.seller-offers-refresh-button:hover:not(:disabled) {
+  border-color: #b48643;
+
+  color: #b48643;
+}
+
+.seller-offers-refresh-button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   OFFER LIST
+========================================================= */
+
+.seller-offers-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* =========================================================
+   OFFER CARD
+========================================================= */
+
+.seller-offers-card {
+  overflow: hidden;
+
+  border: 1px solid #e3e6ea;
+
+  border-radius: 12px;
+
+  background: white;
+
+  box-shadow:
+    0 4px 18px rgba(23, 34, 53, 0.025);
+
+  transition: all 0.2s ease;
+}
+
+.seller-offers-card:hover {
+  box-shadow:
+    0 10px 28px rgba(23, 34, 53, 0.055);
+}
+
+
+/* =========================================================
+   CARD TOP
+========================================================= */
+
+.seller-offers-card-top {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 21px 23px;
+
+  border-bottom: 1px solid #edf0f2;
+}
+
+
+/* =========================================================
+   PROPERTY INFO
+========================================================= */
+
+.seller-offers-property-info {
+  min-width: 0;
+}
+
+.seller-offers-property-type {
+  display: inline-block;
+
+  margin-bottom: 6px;
+
+  color: #b48643;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.seller-offers-property-info h3 {
+  margin: 0 0 7px;
+
+  overflow: hidden;
+
+  color: #172235;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.seller-offers-property-info p {
+  margin: 0;
+
+  color: #9299a3;
+
+  font-size: 10px;
+}
+
+
+/* =========================================================
+   STATUS
+========================================================= */
+
+.seller-offers-status {
+  flex-shrink: 0;
+
+  padding: 6px 10px;
+
+  border-radius: 20px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.seller-offers-status-pending {
+  background: #fff5df;
+
+  color: #a56e18;
+}
+
+.seller-offers-status-countered {
+  background: #eee9ff;
+
+  color: #7257a8;
+}
+
+.seller-offers-status-accepted {
+  background: #e4f1e8;
+
+  color: #43805b;
+}
+
+.seller-offers-status-rejected {
+  background: #fbe9e9;
+
+  color: #b75c5c;
+}
+
+
+/* =========================================================
+   CARD BODY
+========================================================= */
+
+.seller-offers-card-body {
+  display: grid;
+
+  grid-template-columns: 1.4fr 1fr 0.8fr;
+
+  gap: 20px;
+
+  padding: 20px 23px;
+}
+
+
+/* =========================================================
+   DETAIL
+========================================================= */
+
+.seller-offers-detail {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.seller-offers-detail-label {
+  color: #a0a6ae;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.seller-offers-detail strong {
+  color: #273345;
+
+  font-size: 11px;
+}
+
+.seller-offers-detail small {
+  overflow: hidden;
+
+  color: #9299a3;
+
+  font-size: 9px;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.seller-offers-amount {
+  color: #b48643 !important;
+
+  font-size: 14px !important;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.seller-offers-message {
+  margin: 0 23px;
+
+  padding: 14px 0;
+
+  border-top: 1px solid #edf0f2;
+}
+
+.seller-offers-message span {
+  color: #a0a6ae;
+
+  font-size: 7px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.seller-offers-message p {
+  margin: 6px 0 0;
+
+  color: #596270;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   ACTIONS
+========================================================= */
+
+.seller-offers-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  padding: 15px 23px;
+
+  border-top: 1px solid #edf0f2;
+
+  background: #fafbfc;
+}
+
+.seller-offers-actions button {
+  height: 35px;
+
+  padding: 0 13px;
+
+  border-radius: 6px;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.seller-offers-actions button:disabled {
+  opacity: 0.5;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   REJECT
+========================================================= */
+
+.seller-offers-reject-button {
+  border: 1px solid #ead5d5;
+
+  background: #fffafa;
+
+  color: #a35d5d;
+}
+
+.seller-offers-reject-button:hover:not(:disabled) {
+  background: #f9eeee;
+}
+
+
+/* =========================================================
+   COUNTER
+========================================================= */
+
+.seller-offers-counter-button {
+  border: 1px solid #d9d0eb;
+
+  background: white;
+
+  color: #7257a8;
+}
+
+.seller-offers-counter-button:hover:not(:disabled) {
+  background: #f7f3ff;
+}
+
+
+/* =========================================================
+   ACCEPT
+========================================================= */
+
+.seller-offers-accept-button {
+  border: none;
+
+  background: #172235;
+
+  color: white;
+}
+
+.seller-offers-accept-button:hover:not(:disabled) {
+  background: #263850;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.seller-offers-loading {
+  min-height: 400px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #9299a3;
+
+  font-size: 12px;
+}
+
+.seller-offers-loading p {
+  margin: 0;
+}
+
+.seller-offers-loading-spinner {
+  width: 30px;
+  height: 30px;
+
+  margin-bottom: 12px;
+
+  border: 3px solid #e1e4e8;
+
+  border-top-color: #b48643;
+
+  border-radius: 50%;
+
+  animation: sellerOffersLoadingSpin 0.8s linear infinite;
+}
+
+@keyframes sellerOffersLoadingSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.seller-offers-empty {
+  min-height: 400px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px dashed #d9dee3;
+
+  border-radius: 12px;
+
+  background: white;
+
+  text-align: center;
+}
+
+.seller-offers-empty-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 50%;
+
+  background: #f1f3f5;
+
+  color: #b48643;
+
+  font-size: 25px;
+}
+
+.seller-offers-empty h3 {
+  margin: 0 0 7px;
+
+  color: #172235;
+
+  font-size: 15px;
+}
+
+.seller-offers-empty p {
+  max-width: 360px;
+
+  margin: 0;
+
+  color: #9299a3;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+.seller-offers-empty button {
+  margin-top: 18px;
+
+  padding: 10px 15px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #172235;
+
+  color: white;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.seller-offers-empty button:hover {
+  background: #263850;
+}
+
+
+/* =========================================================
+   COUNTER MODAL
+========================================================= */
+
+.seller-offers-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(15, 23, 42, 0.65);
+
+  z-index: 9999;
+}
+
+.seller-offers-modal {
+  width: 100%;
+
+  max-width: 470px;
+
+  overflow: hidden;
+
+  border-radius: 13px;
+
+  background: white;
+
+  box-shadow:
+    0 20px 60px rgba(15, 23, 42, 0.25);
+}
+
+
+/* =========================================================
+   MODAL HEADER
+========================================================= */
+
+.seller-offers-modal-header {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content: space-between;
+
+  padding: 23px 25px;
+
+  border-bottom: 1px solid #edf0f2;
+}
+
+.seller-offers-modal-header p {
+  margin: 0 0 3px;
+
+  color: #b48643;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.3px;
+}
+
+.seller-offers-modal-header h2 {
+  margin: 0;
+
+  color: #172235;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.seller-offers-modal-close-button {
+  width: 28px;
+  height: 28px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #f4f5f6;
+
+  color: #707984;
+
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.seller-offers-modal-close-button:hover {
+  background: #e9ebed;
+
+  color: #172235;
+}
+
+
+/* =========================================================
+   MODAL PROPERTY
+========================================================= */
+
+.seller-offers-modal-property {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  margin: 20px 25px;
+
+  padding: 13px;
+
+  border-radius: 8px;
+
+  background: #f7f8f9;
+}
+
+.seller-offers-modal-property strong {
+  color: #273345;
+
+  font-size: 11px;
+}
+
+.seller-offers-modal-property span {
+  color: #9299a3;
+
+  font-size: 9px;
+}
+
+
+/* =========================================================
+   COUNTER FORM
+========================================================= */
+
+.seller-offers-counter-form {
+  padding: 0 25px 25px;
+}
+
+.seller-offers-form-field {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  margin-bottom: 17px;
+}
+
+.seller-offers-form-field label {
+  color: #3b4450;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.seller-offers-form-field input,
+.seller-offers-form-field textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dfe3e8;
+
+  border-radius: 7px;
+
+  outline: none;
+
+  background: white;
+
+  color: #172235;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  transition: all 0.2s ease;
+}
+
+.seller-offers-form-field input {
+  height: 44px;
+
+  padding: 0 12px;
+}
+
+.seller-offers-form-field textarea {
+  padding: 11px;
+
+  resize: vertical;
+}
+
+.seller-offers-form-field input:focus,
+.seller-offers-form-field textarea:focus {
+  border-color: #b48643;
+
+  box-shadow:
+    0 0 0 3px rgba(180, 134, 67, 0.08);
+}
+
+
+/* =========================================================
+   COUNTER PRICE
+========================================================= */
+
+.seller-offers-counter-price {
+  position: relative;
+}
+
+.seller-offers-counter-price > span {
+  position: absolute;
+
+  left: 12px;
+
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #8d959e;
+
+  font-size: 10px;
+
+  pointer-events: none;
+}
+
+.seller-offers-counter-price input {
+  padding-left: 34px;
+}
+
+
+/* =========================================================
+   MODAL ACTIONS
+========================================================= */
+
+.seller-offers-modal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 8px;
+
+  padding-top: 5px;
+}
+
+.seller-offers-modal-actions button {
+  height: 39px;
+
+  padding: 0 14px;
+
+  border-radius: 7px;
+
+  font-family: inherit;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+
+/* =========================================================
+   MODAL CANCEL
+========================================================= */
+
+.seller-offers-modal-cancel-button {
+  border: 1px solid #dfe3e8;
+
+  background: white;
+
+  color: #69727d;
+}
+
+.seller-offers-modal-cancel-button:hover {
+  background: #f7f8f9;
+}
+
+
+/* =========================================================
+   MODAL SUBMIT
+========================================================= */
+
+.seller-offers-modal-submit-button {
+  border: none;
+
+  background: #172235;
+
+  color: white;
+}
+
+.seller-offers-modal-submit-button:hover:not(:disabled) {
+  background: #263850;
+}
+
+.seller-offers-modal-submit-button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .seller-offers-main {
+    padding-left: 25px;
+
+    padding-right: 25px;
+  }
+
+  .seller-offers-content {
+    max-width: 100%;
+  }
+
+  .seller-offers-card-body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .seller-offers-page {
+    display: block;
+  }
+
+  .seller-offers-main {
+    width: 100%;
+
+    min-height: auto;
+
+    margin-left: 0;
+
+    padding: 0 17px 30px;
+  }
+
+  .seller-offers-content {
+    padding-top: 25px;
+  }
+
+  .seller-offers-intro {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    margin-bottom: 20px;
+  }
+
+  .seller-offers-intro-actions {
+    width: 100%;
+
+    justify-content: space-between;
+  }
+
+  .seller-offers-card-top {
+    flex-direction: column;
+  }
+
+  .seller-offers-card-body {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+  }
+
+  .seller-offers-actions {
+    flex-direction: column;
+  }
+
+  .seller-offers-actions button {
+    width: 100%;
+  }
+
+  .seller-offers-modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .seller-offers-modal-actions button {
+    width: 100%;
+  }
+}
