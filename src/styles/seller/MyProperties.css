@@ -1,0 +1,861 @@
+/* =========================================
+   MY PROPERTIES PAGE
+========================================= */
+
+.seller-properties-page {
+  min-height: 100vh;
+
+  display: flex;
+
+  background: #eeece7;
+
+  color: #172235;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.properties-sidebar {
+  position: fixed;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 250px;
+
+  padding: 28px 18px;
+
+  background: #172235;
+}
+
+.properties-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 0 10px;
+
+  color: white;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.properties-logo > span > span {
+  color: #d6a85f;
+}
+
+.properties-logo-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 9px;
+
+  background: #d6a85f;
+
+  font-size: 18px;
+}
+
+/* =========================================
+   NAV
+========================================= */
+
+.properties-nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  margin-top: 55px;
+}
+
+.properties-nav p {
+  margin: 0 10px 12px;
+
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.properties-nav button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: rgba(255, 255, 255, 0.58);
+
+  font-size: 13px;
+
+  text-align: left;
+
+  cursor: pointer;
+}
+
+.properties-nav button:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  color: white;
+}
+
+.properties-nav button.active {
+  background: rgba(214, 168, 95, 0.14);
+
+  color: #d6a85f;
+}
+
+.properties-nav button span {
+  width: 22px;
+
+  display: flex;
+  justify-content: center;
+}
+
+/* =========================================
+   MAIN
+========================================= */
+
+.properties-main {
+  width: calc(100% - 250px);
+
+  margin-left: 250px;
+
+  padding: 0 45px 50px;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.properties-header {
+  height: 88px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #e6e8eb;
+}
+
+.properties-header p {
+  margin: 0 0 3px;
+
+  color: #b48643;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1.7px;
+}
+
+.properties-header h1 {
+  margin: 0;
+
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.add-property-header-btn {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  padding: 11px 16px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #172235;
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.add-property-header-btn:hover {
+  background: #263850;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.properties-content {
+  padding-top: 35px;
+}
+
+.properties-title-row {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 22px;
+}
+
+.properties-title-row h2 {
+  margin: 0 0 5px;
+
+  font-size: 20px;
+}
+
+.properties-title-row p {
+  margin: 0;
+
+  color: #9299a3;
+
+  font-size: 11px;
+}
+
+.property-count {
+  padding: 7px 11px;
+
+  border-radius: 20px;
+
+  background: #edeff2;
+
+  color: #777f8a;
+
+  font-size: 10px;
+}
+
+/* =========================================
+   PROPERTY GRID
+========================================= */
+
+.property-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+/* =========================================
+   PROPERTY CARD
+========================================= */
+
+.property-card {
+  overflow: hidden;
+
+  border: 1px solid #e3e6ea;
+
+  border-radius: 12px;
+
+  background: white;
+
+  transition: all 0.2s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 30px rgba(23, 34, 53, 0.07);
+}
+
+/* =========================================
+   IMAGE AREA
+========================================= */
+
+.property-card-image {
+  position: relative;
+
+  height: 180px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(135deg, #e9edf1, #dce2e8);
+}
+
+/* Actual property image */
+
+.property-card-image > img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+/* Slight zoom when hovering over card */
+
+.property-card:hover .property-card-image > img {
+  transform: scale(1.03);
+}
+
+/* Image fallback */
+
+.property-card-image-fallback {
+  width: 100%;
+  height: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  font-size: 55px;
+
+  opacity: 0.45;
+}
+
+/* =========================================
+   PROPERTY STATUS
+========================================= */
+
+.property-status {
+  position: absolute;
+
+  top: 12px;
+  right: 12px;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 9px;
+  font-weight: 700;
+}
+
+.status-available {
+  background: #e4f1e8;
+
+  color: #43805b;
+}
+
+.status-under-offer {
+  background: #f7edda;
+
+  color: #9a722f;
+}
+
+.status-sold {
+  background: #eee1e1;
+
+  color: #935656;
+}
+
+/* =========================================
+   CARD BODY
+========================================= */
+
+.property-card-body {
+  padding: 18px;
+}
+
+.property-card-type {
+  margin-bottom: 6px;
+
+  color: #b48643;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.property-card-body h3 {
+  margin: 0 0 8px;
+
+  font-size: 15px;
+
+  line-height: 1.3;
+}
+
+.property-location {
+  display: flex;
+  align-items: center;
+
+  gap: 5px;
+
+  color: #8c949e;
+
+  font-size: 10px;
+}
+
+.property-location span {
+  color: #b48643;
+}
+
+.property-price {
+  margin-top: 15px;
+
+  color: #172235;
+
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.property-features {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 10px;
+
+  padding-bottom: 15px;
+
+  border-bottom: 1px solid #edf0f2;
+
+  color: #8e969f;
+
+  font-size: 9px;
+}
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.property-card-actions {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+
+  gap: 6px;
+
+  margin-top: 14px;
+}
+
+.property-card-actions button {
+  padding: 8px 5px;
+
+  border-radius: 6px;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.property-edit-btn {
+  border: 1px solid #dce1e6;
+
+  background: white;
+
+  color: #495361;
+}
+
+.property-edit-btn:hover:not(:disabled) {
+  border-color: #b48643;
+
+  color: #b48643;
+}
+
+.property-offers-btn {
+  border: none;
+
+  background: #172235;
+
+  color: white;
+}
+
+.property-offers-btn:hover {
+  background: #263850;
+}
+
+.property-delete-btn {
+  border: 1px solid #ead5d5;
+
+  background: #fffafa;
+
+  color: #a35d5d;
+}
+
+.property-delete-btn:hover:not(:disabled) {
+  background: #f9eeee;
+}
+
+.property-card-actions button:disabled {
+  opacity: 0.4;
+
+  cursor: not-allowed;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.properties-loading {
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: #9299a3;
+
+  font-size: 12px;
+}
+
+.properties-spinner {
+  width: 30px;
+  height: 30px;
+
+  margin-bottom: 12px;
+
+  border: 3px solid #e1e4e8;
+
+  border-top-color: #b48643;
+
+  border-radius: 50%;
+
+  animation: propertySpin 0.8s linear infinite;
+}
+
+@keyframes propertySpin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================================
+   EMPTY
+========================================= */
+
+.properties-empty {
+  min-height: 400px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px dashed #d9dee3;
+
+  border-radius: 12px;
+
+  background: white;
+
+  text-align: center;
+}
+
+.empty-property-icon {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  border-radius: 50%;
+
+  background: #f1f3f5;
+
+  font-size: 25px;
+}
+
+.properties-empty h3 {
+  margin: 0 0 7px;
+
+  font-size: 15px;
+}
+
+.properties-empty p {
+  margin: 0;
+
+  color: #9299a3;
+
+  font-size: 11px;
+}
+
+.properties-empty button {
+  margin-top: 18px;
+
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #172235;
+
+  color: white;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.properties-empty button:hover {
+  background: #263850;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+  .properties-main {
+    padding: 0 25px 40px;
+  }
+
+  .property-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+  .seller-properties-page {
+    display: block;
+  }
+
+  .properties-sidebar {
+    position: relative;
+
+    width: 100%;
+
+    padding: 17px 18px;
+  }
+
+  .properties-logo {
+    padding: 0;
+  }
+
+  .properties-nav {
+    margin-top: 20px;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .properties-nav p {
+    display: none;
+  }
+
+  .properties-nav button {
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    padding: 9px 3px;
+
+    text-align: center;
+
+    font-size: 8px;
+  }
+
+  .properties-main {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 0 17px 30px;
+  }
+
+  .properties-header {
+    height: 75px;
+  }
+
+  .properties-header h1 {
+    font-size: 19px;
+  }
+
+  .add-property-header-btn {
+    padding: 9px 10px;
+
+    font-size: 9px;
+  }
+
+  .properties-content {
+    padding-top: 25px;
+  }
+
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .properties-title-row {
+    align-items: center;
+  }
+
+  .property-card-image {
+    height: 200px;
+  }
+}
+
+/* =========================================
+   DELETE CONFIRMATION MODAL
+========================================= */
+
+.delete-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(15, 23, 42, 0.65);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 9999;
+
+  padding: 20px;
+}
+
+.delete-modal {
+  width: 100%;
+
+  max-width: 430px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  padding: 32px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.25);
+
+  animation: deleteModalAppear 0.2s ease;
+}
+
+@keyframes deleteModalAppear {
+  from {
+    opacity: 0;
+
+    transform: translateY(10px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0) scale(1);
+  }
+}
+
+.delete-modal-icon {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  background: #fef2f2;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+}
+
+.delete-modal h3 {
+  margin: 0 0 12px;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  color: #0f172a;
+}
+
+.delete-modal p {
+  margin: 0;
+
+  color: #64748b;
+
+  line-height: 1.6;
+}
+
+.delete-modal p strong {
+  color: #0f172a;
+}
+
+.delete-modal-warning {
+  margin-top: 6px !important;
+
+  font-size: 13px;
+
+  color: #ef4444 !important;
+}
+
+.delete-modal-actions {
+  display: flex;
+
+  gap: 12px;
+
+  margin-top: 26px;
+}
+
+.delete-modal-actions button {
+  flex: 1;
+
+  min-height: 44px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.delete-modal-cancel {
+  background: #f1f5f9;
+
+  color: #334155;
+}
+
+.delete-modal-cancel:hover {
+  background: #e2e8f0;
+}
+
+.delete-modal-confirm {
+  background: #dc2626;
+
+  color: #ffffff;
+}
+
+.delete-modal-confirm:hover {
+  background: #b91c1c;
+}
+
+.delete-modal-actions button:disabled {
+  opacity: 0.6;
+
+  cursor: not-allowed;
+}
