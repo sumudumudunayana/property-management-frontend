@@ -41,27 +41,20 @@ const SellerSidebar = () => {
 
   return (
     <aside className="regal-seller-sidebar">
-
       {/* =========================================
           LOGO
       ========================================= */}
 
       <div className="regal-seller-sidebar-logo">
-
         <div className="regal-seller-sidebar-logo-icon">
           <span>R</span>
         </div>
 
         <div className="regal-seller-sidebar-brand">
-          <span className="regal-brand-main">
-            Regal
-          </span>
+          <span className="regal-brand-main">Regal</span>
 
-          <span className="regal-brand-sub">
-            Residences
-          </span>
+          <span className="regal-brand-sub">Residences</span>
         </div>
-
       </div>
 
       {/* =========================================
@@ -69,10 +62,7 @@ const SellerSidebar = () => {
       ========================================= */}
 
       <nav className="regal-seller-sidebar-nav">
-
-        <p className="regal-seller-sidebar-section-title">
-          MAIN MENU
-        </p>
+        <p className="regal-seller-sidebar-section-title">MAIN MENU</p>
 
         {/* Dashboard */}
 
@@ -87,9 +77,7 @@ const SellerSidebar = () => {
             <span>⌂</span>
           </span>
 
-          <span className="regal-seller-sidebar-nav-label">
-            Dashboard
-          </span>
+          <span className="regal-seller-sidebar-nav-label">Dashboard</span>
         </button>
 
         {/* My Properties */}
@@ -105,9 +93,7 @@ const SellerSidebar = () => {
             <span>▱</span>
           </span>
 
-          <span className="regal-seller-sidebar-nav-label">
-            My Properties
-          </span>
+          <span className="regal-seller-sidebar-nav-label">My Properties</span>
         </button>
 
         {/* Add Property */}
@@ -123,9 +109,7 @@ const SellerSidebar = () => {
             <span>＋</span>
           </span>
 
-          <span className="regal-seller-sidebar-nav-label">
-            Add Property
-          </span>
+          <span className="regal-seller-sidebar-nav-label">Add Property</span>
         </button>
 
         {/* Offers */}
@@ -144,9 +128,7 @@ const SellerSidebar = () => {
             <span>◇</span>
           </span>
 
-          <span className="regal-seller-sidebar-nav-label">
-            Offers
-          </span>
+          <span className="regal-seller-sidebar-nav-label">Offers</span>
         </button>
 
         {/* =========================================
@@ -168,11 +150,8 @@ const SellerSidebar = () => {
             <span>○</span>
           </span>
 
-          <span className="regal-seller-sidebar-nav-label">
-            Profile
-          </span>
+          <span className="regal-seller-sidebar-nav-label">Profile</span>
         </button>
-
       </nav>
 
       {/* =========================================
@@ -180,27 +159,18 @@ const SellerSidebar = () => {
       ========================================= */}
 
       <div className="regal-seller-sidebar-bottom">
-
         {/* User */}
 
         <div className="regal-seller-sidebar-user">
-
           <div className="regal-seller-sidebar-avatar">
             {user?.name?.charAt(0)?.toUpperCase() || "S"}
           </div>
 
           <div className="regal-seller-sidebar-user-info">
+            <strong>{user?.name || "Seller"}</strong>
 
-            <strong>
-              {user?.name || "Seller"}
-            </strong>
-
-            <span>
-              Property Seller
-            </span>
-
+            <span>Property Seller</span>
           </div>
-
         </div>
 
         {/* Logout */}
@@ -210,17 +180,11 @@ const SellerSidebar = () => {
           className="regal-seller-sidebar-logout"
           onClick={handleLogout}
         >
-          <span className="regal-seller-sidebar-logout-icon">
-            ↪
-          </span>
+          <span className="regal-seller-sidebar-logout-icon">↪</span>
 
-          <span>
-            Logout
-          </span>
+          <span>Logout</span>
         </button>
-
       </div>
-
     </aside>
   );
 };
