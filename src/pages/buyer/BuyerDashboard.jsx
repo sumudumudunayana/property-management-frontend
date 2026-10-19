@@ -157,7 +157,7 @@ const BuyerDashboard = () => {
                 SIDEBAR
             ========================================= */}
 
-       <BuyerSidebar />
+      <BuyerSidebar />
 
       {/* =========================================
                 MAIN CONTENT
@@ -170,7 +170,7 @@ const BuyerDashboard = () => {
 
         {/* =========================================
                     WELCOME BANNER
-                ========================================= */}
+        ========================================= */}
 
         <section className="welcome-banner">
           <div className="welcome-content">
