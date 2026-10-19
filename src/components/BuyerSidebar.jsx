@@ -41,27 +41,20 @@ const BuyerSidebar = () => {
 
   return (
     <aside className="regal-buyer-sidebar">
-
       {/* =========================================
           LOGO
       ========================================= */}
 
       <div className="regal-buyer-sidebar-logo">
-
         <div className="regal-buyer-sidebar-logo-icon">
           <span>R</span>
         </div>
 
         <div className="regal-buyer-sidebar-brand">
-          <span className="regal-buyer-brand-main">
-            Regal
-          </span>
+          <span className="regal-buyer-brand-main">Regal</span>
 
-          <span className="regal-buyer-brand-sub">
-            Residences
-          </span>
+          <span className="regal-buyer-brand-sub">Residences</span>
         </div>
-
       </div>
 
       {/* =========================================
@@ -69,10 +62,7 @@ const BuyerSidebar = () => {
       ========================================= */}
 
       <nav className="regal-buyer-sidebar-nav">
-
-        <p className="regal-buyer-sidebar-section-title">
-          MAIN MENU
-        </p>
+        <p className="regal-buyer-sidebar-section-title">MAIN MENU</p>
 
         {/* Dashboard */}
 
@@ -87,9 +77,7 @@ const BuyerSidebar = () => {
             <span>⌂</span>
           </span>
 
-          <span className="regal-buyer-sidebar-nav-label">
-            Dashboard
-          </span>
+          <span className="regal-buyer-sidebar-nav-label">Dashboard</span>
         </button>
 
         {/* Browse Properties */}
@@ -123,9 +111,7 @@ const BuyerSidebar = () => {
             <span>◇</span>
           </span>
 
-          <span className="regal-buyer-sidebar-nav-label">
-            My Offers
-          </span>
+          <span className="regal-buyer-sidebar-nav-label">My Offers</span>
         </button>
 
         {/* =========================================
@@ -147,11 +133,8 @@ const BuyerSidebar = () => {
             <span>○</span>
           </span>
 
-          <span className="regal-buyer-sidebar-nav-label">
-            Profile
-          </span>
+          <span className="regal-buyer-sidebar-nav-label">Profile</span>
         </button>
-
       </nav>
 
       {/* =========================================
@@ -159,27 +142,18 @@ const BuyerSidebar = () => {
       ========================================= */}
 
       <div className="regal-buyer-sidebar-bottom">
-
         {/* User */}
 
         <div className="regal-buyer-sidebar-user">
-
           <div className="regal-buyer-sidebar-avatar">
             {user?.name?.charAt(0)?.toUpperCase() || "B"}
           </div>
 
           <div className="regal-buyer-sidebar-user-info">
+            <strong>{user?.name || "Buyer"}</strong>
 
-            <strong>
-              {user?.name || "Buyer"}
-            </strong>
-
-            <span>
-              Property Buyer
-            </span>
-
+            <span>Property Buyer</span>
           </div>
-
         </div>
 
         {/* Logout */}
@@ -189,17 +163,11 @@ const BuyerSidebar = () => {
           className="regal-buyer-sidebar-logout"
           onClick={handleLogout}
         >
-          <span className="regal-buyer-sidebar-logout-icon">
-            ↪
-          </span>
+          <span className="regal-buyer-sidebar-logout-icon">↪</span>
 
-          <span>
-            Logout
-          </span>
+          <span>Logout</span>
         </button>
-
       </div>
-
     </aside>
   );
 };
