@@ -15,11 +15,7 @@ const BuyerTopbar = ({ title }) => {
         <h2>{title}</h2>
       </div>
 
-      <div className="propertyhub-buyer-topbar-profile">
-       
-
-        
-      </div>
+      <div className="propertyhub-buyer-topbar-profile"></div>
     </header>
   );
 };
