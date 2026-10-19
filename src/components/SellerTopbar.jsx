@@ -5,8 +5,7 @@ import "../styles/components/SellerTopbar.css";
 const SellerTopbar = ({ title }) => {
   const { user } = useAuth();
 
-  const userInitial =
-    user?.name?.charAt(0)?.toUpperCase() || "S";
+  const userInitial = user?.name?.charAt(0)?.toUpperCase() || "S";
 
   return (
     <header className="propertyhub-seller-topbar">
@@ -17,9 +16,7 @@ const SellerTopbar = ({ title }) => {
       </div>
 
       <div className="propertyhub-seller-topbar-profile">
-        <div className="propertyhub-seller-topbar-avatar">
-          {userInitial}
-        </div>
+        <div className="propertyhub-seller-topbar-avatar">{userInitial}</div>
 
         <div className="propertyhub-seller-topbar-user">
           <strong>{user?.name || "Seller"}</strong>
