@@ -280,7 +280,7 @@ const PropertyOffers = () => {
       <main className="property-offers-main">
         {/* Header */}
 
-       <SellerTopbar title="Property Offers" />
+        <SellerTopbar title="Property Offers" />
 
         {/* =========================================
                     LOADING
