@@ -228,14 +228,14 @@ const BuyerProperties = () => {
                 SIDEBAR
             ========================================= */}
 
-       <BuyerSidebar />
+      <BuyerSidebar />
 
       {/* =========================================
                 MAIN CONTENT
             ========================================= */}
 
       <main className="buyer-properties-main">
-       <BuyerTopbar title="Browse Properties" />
+        <BuyerTopbar title="Browse Properties" />
 
         {/* =========================================
                     PAGE INTRO
@@ -508,8 +508,7 @@ const BuyerProperties = () => {
                       onError={(event) => {
                         event.currentTarget.style.display = "none";
 
-                        const fallback =
-                          event.currentTarget.nextElementSibling;
+                        const fallback = event.currentTarget.nextElementSibling;
 
                         if (fallback) {
                           fallback.style.display = "flex";
@@ -693,8 +692,7 @@ const BuyerProperties = () => {
                     onError={(event) => {
                       event.currentTarget.style.display = "none";
 
-                      const fallback =
-                        event.currentTarget.nextElementSibling;
+                      const fallback = event.currentTarget.nextElementSibling;
 
                       if (fallback) {
                         fallback.style.display = "flex";
