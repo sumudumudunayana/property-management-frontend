@@ -150,7 +150,7 @@ const MyProperties = () => {
                     SIDEBAR
           ========================================= */}
 
-     <SellerSidebar />
+      <SellerSidebar />
 
       {/* =========================================
                     MAIN CONTENT
@@ -159,7 +159,7 @@ const MyProperties = () => {
       <main className="properties-main">
         {/* Header */}
 
-       <SellerTopbar title="My Properties" />
+        <SellerTopbar title="My Properties" />
 
         {/* Content */}
 
