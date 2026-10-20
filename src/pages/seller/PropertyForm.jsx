@@ -62,9 +62,7 @@ const PropertyForm = () => {
           imageUrl: property.imageUrl ?? "",
         });
       } catch (error) {
-        toast.error(
-          error.response?.data?.message || "Failed to load property"
-        );
+        toast.error(error.response?.data?.message || "Failed to load property");
 
         navigate("/seller/properties");
       } finally {
@@ -102,14 +100,9 @@ const PropertyForm = () => {
         price: Number(formData.price),
         location: formData.location.trim(),
         propertyType: formData.propertyType,
-        bedrooms:
-          formData.bedrooms === ""
-            ? null
-            : Number(formData.bedrooms),
+        bedrooms: formData.bedrooms === "" ? null : Number(formData.bedrooms),
         bathrooms:
-          formData.bathrooms === ""
-            ? null
-            : Number(formData.bathrooms),
+          formData.bathrooms === "" ? null : Number(formData.bathrooms),
         imageUrl: formData.imageUrl.trim(),
       };
 
@@ -127,7 +120,7 @@ const PropertyForm = () => {
     } catch (error) {
       toast.error(
         error.response?.data?.message ||
-          `Failed to ${isEditMode ? "update" : "create"} property`
+          `Failed to ${isEditMode ? "update" : "create"} property`,
       );
     } finally {
       setLoading(false);
@@ -140,9 +133,7 @@ const PropertyForm = () => {
         <SellerSidebar />
 
         <main className="property-form-main">
-          <SellerTopbar
-            title={isEditMode ? "Edit Property" : "Add Property"}
-          />
+          <SellerTopbar title={isEditMode ? "Edit Property" : "Add Property"} />
 
           <div className="property-form-loading">
             <div className="property-form-loading-spinner"></div>
@@ -159,13 +150,10 @@ const PropertyForm = () => {
       <SellerSidebar />
 
       <main className="property-form-main">
-        <SellerTopbar
-          title={isEditMode ? "Edit Property" : "Add Property"}
-        />
+        <SellerTopbar title={isEditMode ? "Edit Property" : "Add Property"} />
 
         <section className="property-form-content">
           <div className="property-form-card">
-
             {/* CARD HEADER */}
 
             <div className="property-form-card-header">
@@ -182,11 +170,7 @@ const PropertyForm = () => {
 
             {/* FORM */}
 
-            <form
-              className="property-form-form"
-              onSubmit={handleSubmit}
-            >
-
+            <form className="property-form-form" onSubmit={handleSubmit}>
               {/* TITLE */}
 
               <div className="property-form-field property-form-field-full">
@@ -271,9 +255,7 @@ const PropertyForm = () => {
               {/* BEDROOMS */}
 
               <div className="property-form-field">
-                <label htmlFor="property-form-bedrooms">
-                  Bedrooms
-                </label>
+                <label htmlFor="property-form-bedrooms">Bedrooms</label>
 
                 <input
                   id="property-form-bedrooms"
@@ -289,9 +271,7 @@ const PropertyForm = () => {
               {/* BATHROOMS */}
 
               <div className="property-form-field">
-                <label htmlFor="property-form-bathrooms">
-                  Bathrooms
-                </label>
+                <label htmlFor="property-form-bathrooms">Bathrooms</label>
 
                 <input
                   id="property-form-bathrooms"
@@ -307,9 +287,7 @@ const PropertyForm = () => {
               {/* IMAGE URL */}
 
               <div className="property-form-field property-form-field-full">
-                <label htmlFor="property-form-image">
-                  Property Image URL
-                </label>
+                <label htmlFor="property-form-image">Property Image URL</label>
 
                 <input
                   id="property-form-image"
@@ -358,7 +336,6 @@ const PropertyForm = () => {
               {/* ACTIONS */}
 
               <div className="property-form-actions">
-
                 <button
                   type="button"
                   className="property-form-cancel-button"
@@ -376,21 +353,16 @@ const PropertyForm = () => {
                     <>
                       <span className="property-form-submit-spinner"></span>
 
-                      {isEditMode
-                        ? "Updating..."
-                        : "Creating..."}
+                      {isEditMode ? "Updating..." : "Creating..."}
                     </>
                   ) : (
                     <>
-                      {isEditMode
-                        ? "Update Property"
-                        : "Create Property"}
+                      {isEditMode ? "Update Property" : "Create Property"}
 
                       <span>→</span>
                     </>
                   )}
                 </button>
-
               </div>
             </form>
           </div>
