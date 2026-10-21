@@ -35,9 +35,7 @@ const SellerOffers = () => {
 
       const offerRequests = properties.map(async (property) => {
         try {
-          const response = await api.get(
-            `/offers/property/${property.id}`
-          );
+          const response = await api.get(`/offers/property/${property.id}`);
 
           return (response.data || []).map((offer) => ({
             ...offer,
@@ -46,7 +44,7 @@ const SellerOffers = () => {
         } catch (error) {
           console.error(
             `Failed to load offers for property ${property.id}`,
-            error
+            error,
           );
 
           return [];
@@ -58,18 +56,12 @@ const SellerOffers = () => {
       const allOffers = results.flat();
 
       allOffers.sort((a, b) => {
-        return (
-          new Date(b.createdAt || 0) -
-          new Date(a.createdAt || 0)
-        );
+        return new Date(b.createdAt || 0) - new Date(a.createdAt || 0);
       });
 
       setOffers(allOffers);
     } catch (error) {
-      toast.error(
-        error.response?.data?.message ||
-          "Failed to load offers"
-      );
+      toast.error(error.response?.data?.message || "Failed to load offers");
     } finally {
       setLoading(false);
     }
@@ -89,10 +81,7 @@ const SellerOffers = () => {
 
       await loadOffers();
     } catch (error) {
-      toast.error(
-        error.response?.data?.message ||
-          "Failed to accept offer"
-      );
+      toast.error(error.response?.data?.message || "Failed to accept offer");
     } finally {
       setActionLoading(null);
     }
@@ -108,10 +97,7 @@ const SellerOffers = () => {
 
       await loadOffers();
     } catch (error) {
-      toast.error(
-        error.response?.data?.message ||
-          "Failed to reject offer"
-      );
+      toast.error(error.response?.data?.message || "Failed to reject offer");
     } finally {
       setActionLoading(null);
     }
@@ -137,9 +123,7 @@ const SellerOffers = () => {
     e.preventDefault();
 
     if (!counterAmount || Number(counterAmount) <= 0) {
-      toast.error(
-        "Counter amount must be greater than zero"
-      );
+      toast.error("Counter amount must be greater than zero");
 
       return;
     }
@@ -153,25 +137,19 @@ const SellerOffers = () => {
     try {
       setActionLoading(counterOffer.id);
 
-      await api.put(
-        `/offers/${counterOffer.id}/counter`,
-        {
-          amount: Number(counterAmount),
-          message: counterMessage.trim(),
-        }
-      );
+      await api.put(`/offers/${counterOffer.id}/counter`, {
+        amount: Number(counterAmount),
+        message: counterMessage.trim(),
+      });
 
-      toast.success(
-        "Counter offer sent successfully"
-      );
+      toast.success("Counter offer sent successfully");
 
       closeCounterModal();
 
       await loadOffers();
     } catch (error) {
       toast.error(
-        error.response?.data?.message ||
-          "Failed to send counter offer"
+        error.response?.data?.message || "Failed to send counter offer",
       );
     } finally {
       setActionLoading(null);
@@ -183,13 +161,10 @@ const SellerOffers = () => {
       return "Rs. 0";
     }
 
-    return `Rs. ${Number(amount).toLocaleString(
-      "en-LK",
-      {
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2,
-      }
-    )}`;
+    return `Rs. ${Number(amount).toLocaleString("en-LK", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })}`;
   };
 
   const formatDate = (date) => {
@@ -197,29 +172,19 @@ const SellerOffers = () => {
       return "—";
     }
 
-    return new Date(date).toLocaleDateString(
-      "en-LK",
-      {
-        year: "numeric",
-        month: "short",
-        day: "numeric",
-      }
-    );
+    return new Date(date).toLocaleDateString("en-LK", {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+    });
   };
 
   const getBuyerName = (offer) => {
-    return (
-      offer.buyer?.name ||
-      offer.buyer?.email ||
-      "Buyer"
-    );
+    return offer.buyer?.name || offer.buyer?.email || "Buyer";
   };
 
   const getBuyerEmail = (offer) => {
-    return (
-      offer.buyer?.email ||
-      "No email available"
-    );
+    return offer.buyer?.email || "No email available";
   };
 
   const getStatusClass = (status) => {
@@ -242,15 +207,11 @@ const SellerOffers = () => {
   };
 
   const canTakeAction = (status) => {
-    return (
-      status === "PENDING" ||
-      status === "COUNTERED"
-    );
+    return status === "PENDING" || status === "COUNTERED";
   };
 
   return (
     <div className="seller-offers-page">
-
       {/* SIDEBAR */}
 
       <SellerSidebar />
@@ -258,7 +219,6 @@ const SellerOffers = () => {
       {/* MAIN */}
 
       <main className="seller-offers-main">
-
         {/* REUSABLE TOPBAR */}
 
         <SellerTopbar title="Offers" />
@@ -266,22 +226,16 @@ const SellerOffers = () => {
         {/* CONTENT */}
 
         <div className="seller-offers-content">
-
           {/* INTRO */}
 
           <div className="seller-offers-intro">
-
             <div>
               <h2>Property Offers</h2>
 
-              <p>
-                Review and manage offers received
-                from buyers.
-              </p>
+              <p>Review and manage offers received from buyers.</p>
             </div>
 
             <div className="seller-offers-intro-actions">
-
               <div className="seller-offers-count">
                 <span>{offers.length}</span>
 
@@ -296,7 +250,6 @@ const SellerOffers = () => {
               >
                 ↻ Refresh
               </button>
-
             </div>
           </div>
 
@@ -304,109 +257,72 @@ const SellerOffers = () => {
 
           {loading ? (
             <div className="seller-offers-loading">
-
               <div className="seller-offers-loading-spinner"></div>
 
               <p>Loading offers...</p>
-
             </div>
           ) : offers.length === 0 ? (
-
             /* EMPTY */
 
             <div className="seller-offers-empty">
-
-              <div className="seller-offers-empty-icon">
-                ◫
-              </div>
+              <div className="seller-offers-empty-icon">◫</div>
 
               <h3>No offers yet</h3>
 
               <p>
-                When buyers make offers on your
-                properties, they will appear here.
+                When buyers make offers on your properties, they will appear
+                here.
               </p>
 
               <button
                 type="button"
-                onClick={() =>
-                  navigate("/seller/properties")
-                }
+                onClick={() => navigate("/seller/properties")}
               >
                 View My Properties
               </button>
-
             </div>
-
           ) : (
-
             /* OFFERS */
 
             <div className="seller-offers-list">
-
               {offers.map((offer) => (
-
-                <article
-                  key={offer.id}
-                  className="seller-offers-card"
-                >
-
+                <article key={offer.id} className="seller-offers-card">
                   {/* CARD TOP */}
 
                   <div className="seller-offers-card-top">
-
                     <div className="seller-offers-property-info">
-
                       <span className="seller-offers-property-type">
-                        {offer.property?.propertyType ||
-                          "PROPERTY"}
+                        {offer.property?.propertyType || "PROPERTY"}
                       </span>
 
-                      <h3>
-                        {offer.property?.title ||
-                          "Property"}
-                      </h3>
+                      <h3>{offer.property?.title || "Property"}</h3>
 
                       <p>
-                        📍{" "}
-                        {offer.property?.location ||
-                          "Location unavailable"}
+                        📍 {offer.property?.location || "Location unavailable"}
                       </p>
-
                     </div>
 
                     <div
                       className={`seller-offers-status ${getStatusClass(
-                        offer.status
+                        offer.status,
                       )}`}
                     >
                       {offer.status}
                     </div>
-
                   </div>
 
                   {/* CARD BODY */}
 
                   <div className="seller-offers-card-body">
-
                     <div className="seller-offers-detail">
+                      <span className="seller-offers-detail-label">BUYER</span>
 
-                      <span className="seller-offers-detail-label">
-                        BUYER
-                      </span>
+                      <strong>{getBuyerName(offer)}</strong>
 
-                      <strong>
-                        {getBuyerName(offer)}
-                      </strong>
-
-                      <small>
-                        {getBuyerEmail(offer)}
-                      </small>
-
+                      <small>{getBuyerEmail(offer)}</small>
                     </div>
 
                     <div className="seller-offers-detail">
-
                       <span className="seller-offers-detail-label">
                         OFFER AMOUNT
                       </span>
@@ -414,110 +330,73 @@ const SellerOffers = () => {
                       <strong className="seller-offers-amount">
                         {formatPrice(offer.amount)}
                       </strong>
-
                     </div>
 
                     <div className="seller-offers-detail">
-
                       <span className="seller-offers-detail-label">
                         RECEIVED
                       </span>
 
-                      <strong>
-                        {formatDate(
-                          offer.createdAt
-                        )}
-                      </strong>
-
+                      <strong>{formatDate(offer.createdAt)}</strong>
                     </div>
-
                   </div>
 
                   {/* MESSAGE */}
 
                   {offer.message && (
                     <div className="seller-offers-message">
-
                       <span>Buyer Message</span>
 
-                      <p>
-                        "{offer.message}"
-                      </p>
-
+                      <p>"{offer.message}"</p>
                     </div>
                   )}
 
                   {/* ACTIONS */}
 
                   {canTakeAction(offer.status) && (
-
                     <div className="seller-offers-actions">
-
                       <button
                         type="button"
                         className="seller-offers-reject-button"
-                        disabled={
-                          actionLoading === offer.id
-                        }
-                        onClick={() =>
-                          handleReject(offer.id)
-                        }
+                        disabled={actionLoading === offer.id}
+                        onClick={() => handleReject(offer.id)}
                       >
                         Reject
                       </button>
 
                       {offer.status === "PENDING" && (
-
                         <button
                           type="button"
                           className="seller-offers-counter-button"
-                          disabled={
-                            actionLoading === offer.id
-                          }
-                          onClick={() =>
-                            openCounterModal(offer)
-                          }
+                          disabled={actionLoading === offer.id}
+                          onClick={() => openCounterModal(offer)}
                         >
                           Counter Offer
                         </button>
-
                       )}
 
                       <button
                         type="button"
                         className="seller-offers-accept-button"
-                        disabled={
-                          actionLoading === offer.id
-                        }
-                        onClick={() =>
-                          handleAccept(offer.id)
-                        }
+                        disabled={actionLoading === offer.id}
+                        onClick={() => handleAccept(offer.id)}
                       >
                         {actionLoading === offer.id
                           ? "Processing..."
                           : "Accept Offer"}
                       </button>
-
                     </div>
-
                   )}
-
                 </article>
-
               ))}
-
             </div>
-
           )}
-
         </div>
-
       </main>
 
       {/* COUNTER MODAL */}
 
       {counterOffer && (
-
         <div
           className="seller-offers-modal-overlay"
           onMouseDown={(e) => {
@@ -526,13 +405,10 @@ const SellerOffers = () => {
             }
           }}
         >
-
           <div className="seller-offers-modal">
-
             {/* MODAL HEADER */}
 
             <div className="seller-offers-modal-header">
-
               <div>
                 <p>NEGOTIATION</p>
 
@@ -546,25 +422,14 @@ const SellerOffers = () => {
               >
                 ×
               </button>
-
             </div>
 
             {/* PROPERTY */}
 
             <div className="seller-offers-modal-property">
+              <strong>{counterOffer.property?.title || "Property"}</strong>
 
-              <strong>
-                {counterOffer.property?.title ||
-                  "Property"}
-              </strong>
-
-              <span>
-                Current offer:{" "}
-                {formatPrice(
-                  counterOffer.amount
-                )}
-              </span>
-
+              <span>Current offer: {formatPrice(counterOffer.amount)}</span>
             </div>
 
             {/* FORM */}
@@ -573,57 +438,37 @@ const SellerOffers = () => {
               className="seller-offers-counter-form"
               onSubmit={handleCounter}
             >
-
               <div className="seller-offers-form-field">
-
-                <label htmlFor="seller-counter-amount">
-                  Counter Amount
-                </label>
+                <label htmlFor="seller-counter-amount">Counter Amount</label>
 
                 <div className="seller-offers-counter-price">
-
                   <span>Rs.</span>
 
                   <input
                     id="seller-counter-amount"
                     type="number"
                     value={counterAmount}
-                    onChange={(e) =>
-                      setCounterAmount(
-                        e.target.value
-                      )
-                    }
+                    onChange={(e) => setCounterAmount(e.target.value)}
                     min="0"
                     step="0.01"
                     placeholder="Enter amount"
                   />
-
                 </div>
-
               </div>
 
               <div className="seller-offers-form-field">
-
-                <label htmlFor="seller-counter-message">
-                  Message
-                </label>
+                <label htmlFor="seller-counter-message">Message</label>
 
                 <textarea
                   id="seller-counter-message"
                   value={counterMessage}
-                  onChange={(e) =>
-                    setCounterMessage(
-                      e.target.value
-                    )
-                  }
+                  onChange={(e) => setCounterMessage(e.target.value)}
                   rows="4"
                   placeholder="Write a message to the buyer..."
                 />
-
               </div>
 
               <div className="seller-offers-modal-actions">
-
                 <button
                   type="button"
                   className="seller-offers-modal-cancel-button"
@@ -635,27 +480,17 @@ const SellerOffers = () => {
                 <button
                   type="submit"
                   className="seller-offers-modal-submit-button"
-                  disabled={
-                    actionLoading ===
-                    counterOffer.id
-                  }
+                  disabled={actionLoading === counterOffer.id}
                 >
-                  {actionLoading ===
-                  counterOffer.id
+                  {actionLoading === counterOffer.id
                     ? "Sending..."
                     : "Send Counter Offer"}
                 </button>
-
               </div>
-
             </form>
-
           </div>
-
         </div>
-
       )}
-
     </div>
   );
 };
