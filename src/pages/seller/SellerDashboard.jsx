@@ -104,7 +104,7 @@ const SellerDashboard = () => {
       <main className="seller-main">
         {/* Top Bar */}
 
-       <SellerTopbar title="Dashboard" />
+        <SellerTopbar title="Dashboard" />
 
         {/* =========================================
                     WELCOME BANNER
